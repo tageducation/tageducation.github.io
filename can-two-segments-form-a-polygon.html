@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Can Two Segments Form A Polygon - QnA</title>
+    <meta name="description" content="Can Two Segments Form A Polygon, , , , , , , 0, algorithm - Detect 2 different cases of polygon self-intersection, stackoverflow.com, 1358 x 853, png, , 20, can-two-segments-form-a-polygon, QnA" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Can Two Segments Form A Polygon - QnA" />
+    <meta property="og:description" content="Can Two Segments Form A Polygon, , , , , , , 0, algorithm - Detect 2 different cases of polygon self-intersection, stackoverflow.com, 1358 x 853, png, , 20, can-two-segments-form-a-polygon, QnA" />
+    <meta property="og:site_name" content="QnA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Can Two Segments Form A Polygon - QnA" />
+    <meta name="twitter:description" content="Can Two Segments Form A Polygon, , , , , , , 0, algorithm - Detect 2 different cases of polygon self-intersection, stackoverflow.com, 1358 x 853, png, , 20, can-two-segments-form-a-polygon, QnA" />
+    <link rel='stylesheet' id='generate-style-css' href='https://tageducation.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://tageducation.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://tageducation.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://tageducation.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://tageducation.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://tageducation.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://tageducation.github.io">Home</a></li>
+                        </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://tageducation.github.io" rel="home"> QnA</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Can Two Segments Form A Polygon</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">bajadachrisitne</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Can+Two+Segments+Form+A+Polygon" alt="Can Two Segments Form A Polygon">
+                    </div>
+                    <p></p>
+                    <p>can two segments form a polygon</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#can-two-segments-form-a-polygon">1.
+                                            can two segments form a polygon</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#can-two-segment-form-a-polygon">2.
+                                            Can two segment form a polygon?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#can-two-segments-form-a-polygon-if-yes-draw-the-figure-if-no-explain-why">3.
+                                            Can two segments form a polygon? If yes, draw the figure. If no, explain why. </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-how-many-diagonals-can-you-formed-in-vertex-s-%ef%bf%bca-1b-2c-3d-42-what-is-a-polygona-a-closed-plane-figure-made-up-of-segmentsb-an-open-plane-figure-made-up-of-segmentsc-a-closed-plan">4.
+                                            1.) How many diagonals can you formed in vertex S ￼A. 1B. 2C. 3D. 42.) What is a polygon?A. a closed plane figure made up of segmentsB. an open plane figure made up of segmentsC. a closed plane figure made up of rayD. an open plane figure made up of ray3.) Which is not a polygon?A. a brickB. a donutC. a windowD. a door4.) Which of the following is a quadrilateralA. rhombusB. trapezoidC. kiteD. all of the above5.) It is a segment connecting two non- consecutive sides of the polygon.A. interior angleB. diagonalC. exterior angleD. central angle​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#column-ba-equiangulare-diagonali-triangle0-quadrilateralc-irregulard-convexg-concaven-regularr-equilateralt-polygoncolumn-a1-a-closed-plane-figure-formed-by-three-ormore-segments-sides-such">5.
+                                            Column BA. EquiangularE. DiagonalI. Triangle0. QuadrilateralC. IrregularD. ConvexG. ConcaveN.RegularR.EquilateralT.PolygonColumn A1. A closed plane figure formed by three ormore segments (sides) such that each twoconsecutive segments have a commonendpoint called vertices or angles.2. A polygon with all the sides equal inmeasure.3. A polygon of three sides, 4. It is a simple polygon in which no linesegment between two points on theboundary ever goes outside the polygon.All its interior angles are less than or equalto 180 degrees.5. A segment joining two non-consecutivevertices or angles.6. A polygon that is not a regular polygon.They can be convex or concave. 7. A polygon with all the angles equal inmeasure 8. A polygon that is not convex and italways have at least one interior reflexangle.9. A polygon of four sides.10. A polygon that is both equilateral andequiangular.Sana po matulungan ninyo ako thanks in advance✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#can-two-segments-form-a-polygon-if-yes-draw-the-figure-if-no-explain-why">6.
+                                            Can two segments form a polygon? If yes, draw the figure. If no, explain why. </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#15-the-sides-of-a-polygon-measures-90-cm-according-to-the-congruency-of-parts-what-kind-ofpolygon-do-we-havea-regular-polygon-b-equiangular-polygon-c-equilateral-polygon-d-convex-polygon16-it">7.
+                                            15. The sides of a polygon measures 90 cm. According to the congruency of parts, what kind ofpolygon do we have?a. Regular polygon b. equiangular polygon c. equilateral polygon d. convex polygon16. It is an angle on the inside of a polygon formed by each pair of adjacent sides.a. Diagonal angle b.right anglec. interior angle d. exterior angle17. A segment joining two nonconsecutive vertices of a convex polygon.a. Rayb. line segmentc. lined. diagonal18. What is the sum of the measures of the interior angles of a triangle?aa. 3600b. 2700d. 90019. If the formula in finding the sum of the interior angles of a regular polygon is Si = (n-2) x 180,where Si is the sum of the interior angles and n is the number of sides, then what is the sum ofthe interior angles of a polygon with 19 sides?a. 3,060°b. 3,070°C. 4,060°d. 4,070°.20. What is the sum of interior angles of a heptagon?b. 540°b. 7200d. 360°21. How many sides does a polygon have if the sum of the interior angles is 1,980?b. 14a. 13d. 16c. 1522. What is the measure of one interior angle of a regular polygon with 20 sides?b. 172923. What is the measure of each exterior angle of a regular pentagon?c. 9000c. 1620d. 152°a. 1820a. 520b. 720C. 620d. 42°24. How many triangles can be form if you draw at one vertex of 16-sided polygon?b. 15C. 16d. 1325. What is the sum of the measures of the interior angles of a regular undecagon?a. 1,620b. 1,630°C. 1,640°d. 1,650°​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#can-two-segments-form-a-polygonif-yes-draw-the-figure-if-no-explain-why">8.
+                                            Can two segments form a polygon?
+If yes, draw the figure, if no, explain why.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#can-two-segments-form-a-polygon-if-yes-draw-the-figure-if-no-explain-why">9.
+                                            Can two segments form a polygon? If yes, draw the figure. If no, explain why. </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#hi-write-true-if-the-statement-below-is-correct-and-faise-if-otherwise-11-a-square-is-a-quadrilateral-with-four-equal-sides-and-four-equal-angles-12-if-the-sides-of-the-regular-polygons-are-equal">10.
+                                            Hi. Write True if the statement below is correct and Faise if otherwise. 11. A square is a quadrilateral with four equal sides and four equal angles. 12. If the sides of the regular polygons are equal, their angles are also equal. 13. A circle is a kind of regular polygon. 14. Two line segments can form a polygon. 15. There are five angles in a pentagon. 16. Regular hexagons have seven equal sides. 17. All heptagons have seven equal sides. 18. The sides and measurement of the angles of irregular polygons are not equal. 19. Congruent polygons are pairs of polygons with the same sizes and shapes. 20. An octagon has three more sides than a pentagon. Name and Signature​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#observe-that-pictures-from-the-left-side-are-flat-these-figures-have-no-thickness-these-are-called-two-dimensional-shapes-or-plane-figures-because-it-only-has-the-length-and-the-width-it-can-be-co">11.
+                                             Observe that pictures from the left side are flat. These figures have no thickness. These are called two-dimensional shapes or plane figures because it only has the length and the width. It can be composed of a straight line, curved line, or both straight and curved lines. The pictures on the right side are figures which do not line flat on a plane. Space figures are often referred to as solids. These solid figures have three dimensions: length, width and height or thickness. The flat surfaces of a solid figure are its faces. Remember that solid figures have polygons as faces. The base is the face on which the figure rests. The edge of a solid figure is the line segment where two faces meet. A vertex (plural: vertices) is the corner that is formed where the ends of the line segments of two or more faces meet. Specifically, you can observe the numbers of faces, edges, and vertices, as well as the shape of the base.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#5-what-solid-can-be-formed-with-this-neta-coneb-prismc-sphered-pyramid6-it-is-three-dimensional-figure-that-has-lenght-width-and-height-they-may-have-faces-edges-and-vertices-a-lineb-circle">12.
+                                            5. What solid can be formed with this net?A. ConeB. PrismC. SphereD. pyramid6. it is three-dimensional figure that has lenght, width and height. They may have faces.edges and vertices.A. LineB. CircleC. PolygonD. Solid figure7. It is the flat surface of a solid figure.A. VertexB. FaceC. EdgeD. Base8. It is a straight line segment that is formed when two faces meet.A. VertexB. FaceC. EdgeD. Base9. A solid figure that is made up of two parallel and congruent bases, which can be anypolygon.A. CylinderB. ConeC. PrismD. Pyramid10. It is a solid figure with congruent parallel circular bases connected by a curved surface.A. PyramidB.CylinderC. ConeD. Prism11. What is this solid figure?D. PyramidA. PrismB. SphereC. Cube12. What is formed when two faces meet and is a straight line segment?A. EdgeB. NetC. VertexD. Faces​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#17-which-of-the-following-is-a-corresponding-anglea-angle-a-and-angle-b-b-angle-a-and-angle-e-c-angle-h-and-angle-b-d-angle-x-and-angle-y20-angle-a-angle-b-angle-g-and-angle-h-area-interior-a">13.
+                                            17. Which of the following is a corresponding angle?a. angle A and angle B b. angle A and angle E c. angle H and angle B d. angle x and angle y20. Angle A, angle B, angle G and angle H area interior angles b.exterior angles c. vertical angles d. alternate exterior angles21. What are the two parallel lines based on the given figure above?a. x &amp; yb.xc. Ed A22. Can two segments form a polygon?a.yesb. Sometimesc Maybed. No23. What is the minimum number of non-collinear segments needed to satisfy the definition of polygon?a.2b.3c.4d. 524. Right angle measures exactlya.80°b.70°c.180° d.90°​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-can-two-segments-form-a-polygonif-yesdraw-the-figure-if-noexplain-why-2-what-is-the-minimum-number-of-non-collinear-segments-needed-to-satisfy-the-defination-of-polygon-above%e2%80%8b">14.
+                                            1. Can two segments form a polygon?If yes,draw the figure.If no,explain why.2. What is the minimum number of non-collinear segments needed to satisfy the defination of polygon above?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#part-iii-assessment-a-directions-write-the-letter-of-the-correct-answer-on-the-space-provided-before-each-number-d-hexagon-1-a-closed-figure-formed-by-three-or-more-line-segments-a-polygon-b">15.
+                                            Part III. ASSESSMENT A. Directions: Write the letter of the correct answer on the space provided before each number. D. hexagon 1. A closed figure formed by three or more line segments, A. polygon B. Nonagon C. pentagon 2. A circle is a polygon. A. Always true C. Never true B. Sometimes true D. Undetermined 3. Which figure below is a polygon ? A. B. C. D. a 8 B. square 4. If a diagonal of a polygon Intersects the exterior of the polygon, what can be concluded? A. It is concave, C. It is complex B. It is convex. D. It is not a polygon, 5. How many sides does undecagon have? A. 10 B. 11 C. 12 D, 13 6. A polygon with 5 sides. A Quadrilateral C. Triangle B. Pentagon D. Undecagon 7. A polygon with minimum number of sides is A. pentagon C. triangle D. angle 8. Polygons that have no portions of their diagonals in their exteriors are called A. square B. triangles C. convex D. concave 9. All sides of a regular polygons are A. parallel B. equal in length C. not parallel D. not equal 10. All angles of a regular polygons are of A. 90° B. 60° C. equal measure D. equal length 11. How many sides does a heptagon have ? A. 2 B4 C.7 D.5 12. How many diagonals does a regular hexagon has? A 2 B. 9 C.3 D.5 13. How many sides does a decagon has? A. 8 B. 10 C.6 D. 11 14. How many vertices does a regular octagon have? A. 7 B. 8 C9 D. 10 15. Which of the following is NOT a quality of a polygon? A. It is formed by three or more line segments called sides. B. Each side intersects exactly two sides, one at each endpoint, so that no two sides with a common endpoint are collinear. C. They are always have more than four sides. D. They are two dimensional.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#fact-or-bluff-write-fact-is-thestatement-is-true-and-bluff-if-the-statement-isfalse-1-polygon-is-a-close-figure-formedby-three-or-more-line-segments-and-no-linesegments-overlapped-2-if-every-line-s">16.
+                                            FACT or BLUFF. Write FACT is thestatement is true and BLUFF if the statement isfalse.1. Polygon is a close figure formedby three or more line segments and no linesegments overlapped.2. If every line segment drawnbetween two points do not lie entirely insidethe figure is classified as concave polygon.3. Polygon can form with twosides.4. If polygon is hexagon thereforeit has seven vertices.5. All sides and angles are equal inregular polygon.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#directions-match-each-vocabulary-term-with-its-definition-write-the-letter-ofnumber-2-points-each1-the-part-of-a-conditional-statement-following-the-word-if%e2%80%9d-2-the-part-of-a-conditiona">17.
+                                            Directions: Match each vocabulary term with its definition. Write the letter ofnumber. (2 POINTS each)1. The part of a conditional statement following the word "if”.2. The part of a conditional statement following the word "then".3. The process of reasoning that a rule or statement is true becausespecific cases are true. It draws conclusion from a pattern.4. A statement that can be written in the form "if p, then q," where p isthe hypothesis and q is the conclusion.5. An example that proves that a conjecture or statement is false.6. A statement that is believed to be true.7. a three-sided polygon.8. A closed plane figure formed by three or more segments such thateach segment intersects exactly two other segments only at theirendpoints and no two segments with a common endpoint are collinear.9. A four-sided polygon.10. The process of using logic to draw conclusions​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#the-following-is-correct-about-a-circlea-closed-plane-figure-composed-of-line-segments-outer-angesdes-a-closed-plane-figure-composed-of-points-that-are-equal-in-datacecode-is-a-closed-figure-with-a">18.
+                                            the following is correct about a circle?a closed plane figure composed of line segments, outer angesdes a closed plane figure composed of points that are equal in datacecode is a closed figure with a center and an angle,Acide is a closed figure with a center and a base13. How do you call two polygons with the same size and shape?A regular polygonsC. irregular polygonsB congruent polygonsD. similar polygons14. Which of the polygons are congruent?сB.GEHFD. G and HC. D and 1B. D and G15. Based on the figure above, what polygon can be formed with combined B andB hexagonA segonC. heptagonDoctagon​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#earning-task-2answer-the-following-questiocan-two-segments-form-a-polygon-if-yes-draw-the-figure-if-no-expwhat-is-the-minimum-number-of-non-collinear-segments-needed-ta-polygon-is-equilateral-ifa">19.
+                                            EARNING TASK 2:Answer the following questioCan two segments form a polygon? If yes, draw the figure. If no, expWhat is the minimum number of non-collinear segments needed tA polygon is equilateral ifA Polygon is equiangular ifA Polygon is regular if​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#11-which-of-these-figures-are-considered-as-convexpolygonsa-a-b-and-cbad-and-fc-b-c-andfd-d-and-e12-which-of-the-following-are-consecutive-vertices-ofpolygon-childa-h-andb-h-and-lc-i-and-d">20.
+                                            11. Which of these figures are considered as convexpolygons?A. a, b and cBad and fC. b, c andfD. d and e12. Which of the following are consecutive vertices ofpolygon CHILD?A. H andB. H and LC. I and DD. L and C13. Which of the following statements is TRUE aboutpolygon?A. Two line segments can be a polygon.B. No diagonal can be formed.C. It is a union of collinear segments.D. It is closed plane figure whose sides are linesegments joined at their endpoints.14. What is the sum of the exterior angles of a polygon?A. 360° 8. 180° C. 540° D. 720015. What is the sum of the measures of interior anglesof a triangle?A. 360°C. 180°B.540D.720°​pag na sagot mo meron kana ng points</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#which-of-the-following-statement-is-true-about-polygona-two-line-segments-can-be-a-polygon-b-it-is-a-union-of-collinear-segments-c-no-diagonals-can-be-formed-d-it-is-closed-plane-figure">21.
+                                            Which of the following statement is TRUE about polygon?
+A. Two line segments can be a polygon.
+B. It is a union of collinear segments.
+C. No diagonals can be formed.
+D. It is closed plane figure.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#gr-sec-score-read-each-item-carefully-choose-the-letter-of-the-correct-answer-1-a-closed-figure-formed-by-three-or-more-line-segments-joined-at-their-endpoints-a-polygon-b-quadrilateral-c">22.
+                                            Gr.&amp;Sec. Score: Read each item carefully. Choose the letter of the correct answer. 1. A closed figure formed by three or more-line segments joined at their endpoints. a. Polygon b. Quadrilateral c. Parallelogram d. Trapezoid 2. A diagonal of a polygon is a line segment linking two non-consecutive vertices. a. always true b. sometimes true c. never true d. undetermined The following figures are examples of polygon except? 3. b. d. ^ 4. Which of the given figure is a polygon? b. a. C, d. 5. A polygon is if it is equilateral and equiangular. a. irregular polygon b. regular polygon c. convex d. concave 6. A polygon is if no diagonal can be found in the exterior of it. a. irregular polygon b. regular polygon c. convex d. concave 7. A polygon is if at least one diagonal can be found in the exterior of it. a. irregular polygon b. regular polygon C. convex d. concave 8. The following figures are models of convex polygon except? b. d. neo​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#part-i-assessment-a-directions-write-the-letter-of-the-correct-answer-on-the-space-provided-before-each-number-1-a-closed-figure-formed-by-three-or-more-line-segments-a-polygon-b-nonagon-c-penta">23.
+                                            Part I. ASSESSMENT A. Directions: Write the letter of the correct answer on the space provided before each number 1. A closed figure formed by three or more line segments A polygon B. Nonagon C. pentagon D. heragon 2. A circle is a polygon A. Always true B. Sometimes true 3. Which figure below is a polygon? C. Never true D. Undetermined A B 8 4. W a diagonal of a polygon intersects the exterior of the polygon, what can be a concluded? A. It is concave C. It is complex B. It is convex D. It is not a polygon 5 How many sides does undecagon have? A 10 B. 11 C. 12 D. 13 6. A polygon with 5 sides A Quadrilateral C. Triangle B. Pentagon D. Undecagon 7. A polygon with minimum number of sides is A. pentagon B. square C. triangle D. angle 8. Polygons that have no portions of their diagonals in their exteriors are called A. square B. triangles C. convex D.concave 9. All sides of a regular polygons are A parallel B. equal in length C. not parallel D. not equal 10. All angles of a regular polygons are of A. 90 B. 60 C.equal measure D. equal length 11. How many sides does a heptagon have ? A. 2 B.4 C.7 D.5 12. How many diagonals does a regular hexagon has? A 2 8.9 C.3 0.5 13. How many sides does a decagon has ? B. 10 C.6 D. 11 14. How many vertices does a regular octagon have? A.7 B.8 C9 D. 10 15. Which of the following is NOT a quality of a polygon? A. It is formed by three or more line segments called sides B. Each side intersects exactly two sides, one at each endpoint, so that no two sides with , a common endpoint are collinear. C. They are always have more than four sides. D. They are two dimensional​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#a-identification-identify-the-term-ask-for-1-are-three-dimensional-objects-this-means-is-that-solid-figures-have-a-width-a-depth-and-a-height-2-a-is-also-a-prism-with-congruent-squares-as-bas">24.
+                                            A. Identification: Identify the term ask for. 1. are three-dimensional objects. This means is that solid figures have a width, a depth, and a height. 2. A is also a prism with congruent squares as bases (or sides) and lateral faces. 3. A is a polyhedron with exactly two faces that are congruent and parallel. These faces are called bases. 4. A is a polyhedron in which one face, also called the base, can be any polygon. 5. A has a circular base connected to a vertex. Suppose the base of a pyramid is a regular polygon. 6. A has two congruent or equal circular bases that are parallel. The following figure is a cylinder. 7. A is a figure with a curved surface in which all points on the surface are equal distance from the center. 8. A is two-dimensional and a solid figure is three-dimensional. 9. is a flat surface that forms part of the boundary of a solid object. 10. An is a line segment joining two vertex.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#activity-2-1-true-or-false-write-true-if-the-statement-is-correct-and-writefalse-if-the-statement-is-not-correct-1-circles-are-polygons-2-regular-polygons-have-congruent-sides-and-congruent-angles">25.
+                                            Activity 2.1 True or False. Write TRUE if the statement is correct and writeFALSE if the statement is not correct.1) Circles are polygons.2) Regular polygons have congruent sides and congruent angles.3) A polygon can be formed by two line segments.4) Irregular polygons mean that no sides and angles are congruent.5) A regular polygon is a convex polygon.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-i-have-learnedactivity-5-match-medirections-read-and-understand-each-statement-carefully-match-column-a-with-column-b-write-the-letter-of-your-answer-on-the-space-providedcolumn-bcolumn-a1-i">26.
+                                            What I Have LearnedActivity 5: Match me!Directions: Read and understand each statement carefully. Match column A with column B.Write the letter of your answer on the space providedColumn BColumn A1. It is a closed figure made up of segments thatintersect at their endpoints and no two consecutivesegments are collinear.2. A point where two sides meet.3. It is a segment joining non-consecutivevertices.4. A polygon with all sides are equal.5. It is an angle formed by two adjacent sidesinside the polygon.6. It is an angle formed by two adjacent sidesoutside the polygon.7. A polygon with all angles are equal.8. It is a polygon with no vertices pointinginwards and no internal angle can be more than 180º.9. It is a polygon with any vertices pointinginwards and any internal angle can be more than 180°.10. It is both equilateral and equiangularA. Exterior AngleB. Regular PolygonC. EquilateralD. EquiangularE. SideF. DiagonalG. Interior AngleH. Convex1. PolygonJ. VertexK. Concave​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#a-point2-it-can-be-represented-by-a-flat-surface-that-extends-infinitely-in-all-directions-a-pointb-linec-plane3-it-is-the-intersection-of-two-or-more-lines-a-pointhlinec-plane4-it-can-be-form">27.
+                                            a. point2. It can be represented by a flat surface that extends infinitely in all directions.a. pointb. linec. plane3. It is the intersection of two or more lines.a pointhlinec. plane4. It can be form when two distinct points are connected with a straight line.a. rayb. segmentc. angle5. Angle that measures exactly 90 degrees.a. acute angle b. right angle c. obtuse angle6. Pair of angles having a total measure of 180 degees.a. complementary angles b. supplementary angles C. vertical angles7. Pair of angles having a total measure of 90 degees.a. complementary angles b. supplementary angles c. vertical angles8. Two or more angles having the same measure.a. adjacent angles b. opposite angles C. congruent angles9. Pair of angles formed by intersecting lines and are congruent.a. adjacent angles b. opposite angles c.vertical angles10. Pair of angles having a common side.a. adjacent angles b. opposite angles c.vertical angles11. Adjacent angles forming a straight line.a. vertical angles b. linear pair C. opposite angles12. Intersecting lines forming a right angle.a. Vertical lines b. Parallel Lines c. Perpendicular Lines13. Lines that never intersect.a. Vertical lines b. Parallel Lines c. Perpendicular Lines14. A line that intersects two or more lines at different points.2.Transversal lines b. Parallel Lines c. Perpendicular Lines15. If two parallel lines are cut by a transversal, then the exterior angles on the same side of the transversalarea. supplementary b. congruent c. adjacent16. It is used to construct and measure angles.a. rulerb. protractorC. compass17. When constructing perpendicular and parallel lines it is best to useda. rulerb. protractor C. compass18. A polygon isif the segment joining any two points on the polygon lies completelyinside the polygon. a. convexb. concavec. regular19. A polygon isif the segment joining any two points on the polygon liesoutside the polygon. a. convexb. concavec. regular20. The total measure of the interior angle of a triangle isdegrees.a. 90b. 180C. 36021. The sum of all angles in a quadrilateral isdegrees.a. 90c. 36022. A polygon with ten sides is calleda. nonagonc. undecagon23. A star shape polygon hassides.b. 180b. decagon​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#dwhat-i-have-learnedactivity-5-match-medirections-read-and-understand-each-statement-carefully-match-column-a-withcolumn-b-write-the-letter-of-your-answer-on-the-space-provided-column-bcolumn-a1">28.
+                                            DWhat I Have LearnedActivity 5: Match me!Directions: Read and understand each statement carefully. Match column A withcolumn B. Write the letter of your answer on the space provided.Column BColumn A1. It is a closed figure made up of segments thatintersect at their endpoints and no two consecutivesegments are collinear.2. A point where two sides meet.3. It is a segment joining non-consecutivevertices.4. A polygon with all sides are equal.5. It is an angle formed by two adjacent sidesinside the polygon.6. It is an angle formed by two adjacent sidesoutside the polygon.7. A polygon with all angles are equal.8. It is a polygon with no vertices pointinginwards and no internal angle can be more than 180°9. It is a polygon with any vertices pointinginwards and any internal angle can be more than 180°.10. It is both equilateral and equiangularA. Exterior AngleB. Regular PolygonC. EquilateralD. EquiangularE. SideF. DiagonalG. Interior AngleH. Convex1. PolygonJ. VertexK. Concave​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#write-math-if-the-statement-is-correct-and-wiz-if-the-statement-is-incorrect1-an-edge-is-formed-when-two-faces-meet-an-edge-is-a-straight-line-segment-2-a-pyramid-has-only-one-basewhich-can-also-any">29.
+                                            Write Math if the statement is correct and WIZ if the statement is incorrect1.An edge is formed when two faces meet.An edge is a straight line segment.2.A pyramid has only one base,which can also any polygon.The other faces are rectangles which meet at a common vertex.3.A cube has 6 faces, 8 vertices and 12 edges 4.A cylinder has no face.5.A ployhedron is a solid figure where all faces are polygons.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#activity-5-read-and-analyze-the-questions-carefully-1-can-two-segments-form-a-polygon2-what-is-the-minimum-number-of-non-collinear-segments-needed-to-satisfy-thedefinition-of-a-polygon3-in-a-conv">30.
+                                            Activity 5.Read and analyze the questions carefully.1. Can two segments form a polygon?2. What is the minimum number of non-collinear segments needed to satisfy thedefinition of a polygon?3. In a convex polygon, the do not go outside the figure.4. How many sides does an octagon have?5. Triangle:3 sides then: six sides​</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="can-two-segments-form-a-polygon">
+                            1. can two segments form a polygon</h2><br />
+                        <p><strong>Answer:</strong></p><p>Two segments connected end to end do not close a figure, so it is not a polygon. ... to make a polygon called a triangle, but the two segments by themselves cannot form a polygon</p><p></p><p><strong>No</strong><strong>,</strong><strong> </strong><strong>because</strong><strong> </strong><strong>to</strong><strong> </strong><strong>form</strong><strong> </strong><strong>a</strong><strong> </strong><strong>polygon</strong><strong> </strong><strong>you</strong><strong> </strong><strong>will</strong><strong> </strong><strong>need</strong><strong> </strong><strong>at least</strong><strong> </strong><strong>3</strong><strong> </strong><strong>segments</strong><strong>.</strong></p><p></p><p></p><p></p><p><strong>hope</strong><strong> </strong><strong>it's</strong><strong> </strong><strong>help&lt;</strong><strong>3.</strong><strong> </strong><strong>paki</strong><strong> </strong><strong>brainliest</strong><strong> </strong><strong>answer</strong><strong> </strong><strong>na</strong><strong> </strong><strong>din</strong><strong>.</strong><strong> </strong><strong>thank</strong><strong> </strong><strong>youu</strong><strong>!</strong></p><br />
+                                            <h2 class="ez-toc-section" id="can-two-segment-form-a-polygon">
+                            2. Can two segment form a polygon?</h2><br />
+                        <p>answer not mine but i hope it helps :&gt;</p><br />
+                                            <h2 class="ez-toc-section" id="can-two-segments-form-a-polygon-if-yes-draw-the-figure-if-no-explain-why">
+                            3. Can two segments form a polygon? If yes, draw the figure. If no, explain why. </h2><br />
+                        <strong>First, in geometry, line means a straight line.  A segment is part of a line, so it is also straight.</strong><br /><br /><strong>The answer is NO</strong><strong>. Two segments CAN NOT form a polygon. </strong><br /><strong>Two segments with one of each endpoint connected form an angle, not a polygon.</strong><br /><br /><strong>Try drawing the figure yourself with this guide (also the reasons):</strong><br /><strong>1)  A polygon is a </strong><strong>closed figure</strong><strong> with all with at least three side.  These sides or segments ARE CONNECTED to form vertices (angles).</strong><br /><br /><strong>2)  The segments MUST be straight, NOT a curved.</strong><br />
+                                            <h2 class="ez-toc-section" id="1-how-many-diagonals-can-you-formed-in-vertex-s-%ef%bf%bca-1b-2c-3d-42-what-is-a-polygona-a-closed-plane-figure-made-up-of-segmentsb-an-open-plane-figure-made-up-of-segmentsc-a-closed-plan">
+                            4. 1.) How many diagonals can you formed in vertex S ￼A. 1B. 2C. 3D. 42.) What is a polygon?A. a closed plane figure made up of segmentsB. an open plane figure made up of segmentsC. a closed plane figure made up of rayD. an open plane figure made up of ray3.) Which is not a polygon?A. a brickB. a donutC. a windowD. a door4.) Which of the following is a quadrilateralA. rhombusB. trapezoidC. kiteD. all of the above5.) It is a segment connecting two non- consecutive sides of the polygon.A. interior angleB. diagonalC. exterior angleD. central angle​</h2><br />
+                        <strong>B</strong><strong>.</strong><strong> </strong><strong>2</strong><strong>A</strong><strong>.</strong><strong> </strong><strong>a</strong><strong> </strong><strong>c</strong><strong>l</strong><strong>o</strong><strong>s</strong><strong>e</strong><strong>d</strong><strong> </strong><strong>p</strong><strong>l</strong><strong>a</strong><strong>n</strong><strong>e</strong><strong> </strong><strong>f</strong><strong>i</strong><strong>g</strong><strong>u</strong><strong>r</strong><strong>e</strong><strong> </strong><strong>m</strong><strong>a</strong><strong>d</strong><strong>e</strong><strong> </strong><strong>u</strong><strong>p</strong><strong> </strong><strong>o</strong><strong>f</strong><strong> </strong><strong>s</strong><strong>e</strong><strong>g</strong><strong>m</strong><strong>e</strong><strong>n</strong><strong>t</strong><strong>s</strong><strong>B</strong><strong>.</strong><strong> </strong><strong>a</strong><strong> </strong><strong>d</strong><strong>o</strong><strong>n</strong><strong>u</strong><strong>t</strong><strong>D</strong><strong>.</strong><strong> </strong><strong>a</strong><strong>l</strong><strong>l</strong><strong> </strong><strong>o</strong><strong>f</strong><strong> </strong><strong>t</strong><strong>h</strong><strong>e</strong><strong> </strong><strong>a</strong><strong>b</strong><strong>o</strong><strong>v</strong><strong>e</strong><strong>B</strong><strong>.</strong><strong> </strong><strong>d</strong><strong>i</strong><strong>a</strong><strong>g</strong><strong>o</strong><strong>n</strong><strong>a</strong><strong>l</strong><p></p><p><strong>Answer:</strong></p><p>1:B</p><p>2:A</p><p>3:B</p><p>4:D</p><p>5:D</p><p></p><p><strong>Step-by-step explanation:</strong></p><p>(A brainliest would be much appreciated)</p><br />
+                                            <h2 class="ez-toc-section" id="column-ba-equiangulare-diagonali-triangle0-quadrilateralc-irregulard-convexg-concaven-regularr-equilateralt-polygoncolumn-a1-a-closed-plane-figure-formed-by-three-ormore-segments-sides-such">
+                            5. Column BA. EquiangularE. DiagonalI. Triangle0. QuadrilateralC. IrregularD. ConvexG. ConcaveN.RegularR.EquilateralT.PolygonColumn A1. A closed plane figure formed by three ormore segments (sides) such that each twoconsecutive segments have a commonendpoint called vertices or angles.2. A polygon with all the sides equal inmeasure.3. A polygon of three sides, 4. It is a simple polygon in which no linesegment between two points on theboundary ever goes outside the polygon.All its interior angles are less than or equalto 180 degrees.5. A segment joining two non-consecutivevertices or angles.6. A polygon that is not a regular polygon.They can be convex or concave. 7. A polygon with all the angles equal inmeasure 8. A polygon that is not convex and italways have at least one interior reflexangle.9. A polygon of four sides.10. A polygon that is both equilateral andequiangular.Sana po matulungan ninyo ako thanks in advance✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.  T. Polygon</p><p>2. R. Equilateral</p><p>3. I. Triangle</p><p>4. D. Convex</p><p>5. E. Diagonal</p><p>6. C. Irregular</p><p>7.  A. Equiangular</p><p>8. G. Concave</p><p>9. O. Quadrilateral</p><p>10. N. Regular </p><p></p><p>correct me if im wrong :)</p><br />
+                                            <h2 class="ez-toc-section" id="can-two-segments-form-a-polygon-if-yes-draw-the-figure-if-no-explain-why">
+                            6. Can two segments form a polygon? If yes, draw the figure. If no, explain why. </h2><br />
+                        no because it will just form a long line like this<br />1     2<br />__ __ <br /><br />Or a triangle that is missing either its base, hypotenuse, or perpendicular<br /><br />SO FOR SHORT ----NO----<br /> <br />
+                                            <h2 class="ez-toc-section" id="15-the-sides-of-a-polygon-measures-90-cm-according-to-the-congruency-of-parts-what-kind-ofpolygon-do-we-havea-regular-polygon-b-equiangular-polygon-c-equilateral-polygon-d-convex-polygon16-it">
+                            7. 15. The sides of a polygon measures 90 cm. According to the congruency of parts, what kind ofpolygon do we have?a. Regular polygon b. equiangular polygon c. equilateral polygon d. convex polygon16. It is an angle on the inside of a polygon formed by each pair of adjacent sides.a. Diagonal angle b.right anglec. interior angle d. exterior angle17. A segment joining two nonconsecutive vertices of a convex polygon.a. Rayb. line segmentc. lined. diagonal18. What is the sum of the measures of the interior angles of a triangle?aa. 3600b. 2700d. 90019. If the formula in finding the sum of the interior angles of a regular polygon is Si = (n-2) x 180,where Si is the sum of the interior angles and n is the number of sides, then what is the sum ofthe interior angles of a polygon with 19 sides?a. 3,060°b. 3,070°C. 4,060°d. 4,070°.20. What is the sum of interior angles of a heptagon?b. 540°b. 7200d. 360°21. How many sides does a polygon have if the sum of the interior angles is 1,980?b. 14a. 13d. 16c. 1522. What is the measure of one interior angle of a regular polygon with 20 sides?b. 172923. What is the measure of each exterior angle of a regular pentagon?c. 9000c. 1620d. 152°a. 1820a. 520b. 720C. 620d. 42°24. How many triangles can be form if you draw at one vertex of 16-sided polygon?b. 15C. 16d. 1325. What is the sum of the measures of the interior angles of a regular undecagon?a. 1,620b. 1,630°C. 1,640°d. 1,650°​</h2><br />
+                        <p><strong>Answer:</strong></p>acbadbcada<p></p><p><strong>Step-by-step explanation:</strong></p>#Curry on learning#<br />
+                                            <h2 class="ez-toc-section" id="can-two-segments-form-a-polygonif-yes-draw-the-figure-if-no-explain-why">
+                            8. Can two segments form a polygon?
+If yes, draw the figure, if no, explain why.</h2><br />
+                        <p><strong>NO</strong></p><p></p><p>Two segments WILL NOT and CANNOT form a polygon. You need atleast 3 segments to form one and that is a triangle. Two segments with one of each endpoint connected from each other form an angle, not a polygon.</p><br />
+                                            <h2 class="ez-toc-section" id="can-two-segments-form-a-polygon-if-yes-draw-the-figure-if-no-explain-why">
+                            9. Can two segments form a polygon? If yes, draw the figure. If no, explain why. </h2><br />
+                        no because, to form a polygon you will need atleast 3 segments<br />
+                                            <h2 class="ez-toc-section" id="hi-write-true-if-the-statement-below-is-correct-and-faise-if-otherwise-11-a-square-is-a-quadrilateral-with-four-equal-sides-and-four-equal-angles-12-if-the-sides-of-the-regular-polygons-are-equal">
+                            10. Hi. Write True if the statement below is correct and Faise if otherwise. 11. A square is a quadrilateral with four equal sides and four equal angles. 12. If the sides of the regular polygons are equal, their angles are also equal. 13. A circle is a kind of regular polygon. 14. Two line segments can form a polygon. 15. There are five angles in a pentagon. 16. Regular hexagons have seven equal sides. 17. All heptagons have seven equal sides. 18. The sides and measurement of the angles of irregular polygons are not equal. 19. Congruent polygons are pairs of polygons with the same sizes and shapes. 20. An octagon has three more sides than a pentagon. Name and Signature​</h2><br />
+                        <p>11.TR</p><p>12.FA</p><p>13.FA</p><p>14.FA</p><p>15.TR</p><p>16.TR</p><p>17.FA</p><p>19.TR</p><p>20.FA</p><p><strong>Answer:</strong></p><p>1. true</p><p>2.true</p><p>3.false</p><p>4. false</p><p>5. true</p><p>6. true</p><p>7. false</p><p>8. true</p><p>9. true</p><p>10. true</p><p><strong>Step-by-step explanation:</strong></p><p><strong>hope this helps</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="observe-that-pictures-from-the-left-side-are-flat-these-figures-have-no-thickness-these-are-called-two-dimensional-shapes-or-plane-figures-because-it-only-has-the-length-and-the-width-it-can-be-co">
+                            11.  Observe that pictures from the left side are flat. These figures have no thickness. These are called two-dimensional shapes or plane figures because it only has the length and the width. It can be composed of a straight line, curved line, or both straight and curved lines. The pictures on the right side are figures which do not line flat on a plane. Space figures are often referred to as solids. These solid figures have three dimensions: length, width and height or thickness. The flat surfaces of a solid figure are its faces. Remember that solid figures have polygons as faces. The base is the face on which the figure rests. The edge of a solid figure is the line segment where two faces meet. A vertex (plural: vertices) is the corner that is formed where the ends of the line segments of two or more faces meet. Specifically, you can observe the numbers of faces, edges, and vertices, as well as the shape of the base.​</h2><br />
+                        <p><strong>Step-by-step explanation:</strong></p><p>sana makatulong po </p><p>tama po yn </p><br />
+                                            <h2 class="ez-toc-section" id="5-what-solid-can-be-formed-with-this-neta-coneb-prismc-sphered-pyramid6-it-is-three-dimensional-figure-that-has-lenght-width-and-height-they-may-have-faces-edges-and-vertices-a-lineb-circle">
+                            12. 5. What solid can be formed with this net?A. ConeB. PrismC. SphereD. pyramid6. it is three-dimensional figure that has lenght, width and height. They may have faces.edges and vertices.A. LineB. CircleC. PolygonD. Solid figure7. It is the flat surface of a solid figure.A. VertexB. FaceC. EdgeD. Base8. It is a straight line segment that is formed when two faces meet.A. VertexB. FaceC. EdgeD. Base9. A solid figure that is made up of two parallel and congruent bases, which can be anypolygon.A. CylinderB. ConeC. PrismD. Pyramid10. It is a solid figure with congruent parallel circular bases connected by a curved surface.A. PyramidB.CylinderC. ConeD. Prism11. What is this solid figure?D. PyramidA. PrismB. SphereC. Cube12. What is formed when two faces meet and is a straight line segment?A. EdgeB. NetC. VertexD. Faces​</h2><br />
+                        <p><strong>Answer:</strong></p><p>5.d</p><p>6.</p><p>7.c</p><p>8.c</p><p>9.c</p><p>10.b</p><p>11.b</p><p>12.A</p><p></p><p>correct me if I'm wrong</p><p><strong>Answer:</strong></p><p>5a</p><p>6c</p><p>7d</p><p>8c</p><p>9d</p><p>10b</p><p>11c</p><p>12c</p><p><strong>Step-by-step explanation:</strong></p><p>pa brainleist po sana makatulong sana mag follow din</p><br />
+                                            <h2 class="ez-toc-section" id="17-which-of-the-following-is-a-corresponding-anglea-angle-a-and-angle-b-b-angle-a-and-angle-e-c-angle-h-and-angle-b-d-angle-x-and-angle-y20-angle-a-angle-b-angle-g-and-angle-h-area-interior-a">
+                            13. 17. Which of the following is a corresponding angle?a. angle A and angle B b. angle A and angle E c. angle H and angle B d. angle x and angle y20. Angle A, angle B, angle G and angle H area interior angles b.exterior angles c. vertical angles d. alternate exterior angles21. What are the two parallel lines based on the given figure above?a. x &amp; yb.xc. Ed A22. Can two segments form a polygon?a.yesb. Sometimesc Maybed. No23. What is the minimum number of non-collinear segments needed to satisfy the definition of polygon?a.2b.3c.4d. 524. Right angle measures exactlya.80°b.70°c.180° d.90°​</h2><br />
+                        <p><strong>Answer:</strong></p><p>17.a</p><p>18.d</p><p>19.c</p><p>20.b</p><p>21.d</p><p>22.d</p><p>23.a</p><p>24.a</p><p>may isip kau kung alm nyu yong sagot</p><br />
+                                            <h2 class="ez-toc-section" id="1-can-two-segments-form-a-polygonif-yesdraw-the-figure-if-noexplain-why-2-what-is-the-minimum-number-of-non-collinear-segments-needed-to-satisfy-the-defination-of-polygon-above%e2%80%8b">
+                            14. 1. Can two segments form a polygon?If yes,draw the figure.If no,explain why.2. What is the minimum number of non-collinear segments needed to satisfy the defination of polygon above?​</h2><br />
+                        <p><strong>Answer:</strong></p><p>No, because polygon is a close shape and if you combine a two segments it can't form a closed shape and a polygon has a minimum of 3 segments. </p><p></p><p><strong>Step-by-step explanation:</strong></p><p>diko po sure kung tama hehe</p><br />
+                                            <h2 class="ez-toc-section" id="part-iii-assessment-a-directions-write-the-letter-of-the-correct-answer-on-the-space-provided-before-each-number-d-hexagon-1-a-closed-figure-formed-by-three-or-more-line-segments-a-polygon-b">
+                            15. Part III. ASSESSMENT A. Directions: Write the letter of the correct answer on the space provided before each number. D. hexagon 1. A closed figure formed by three or more line segments, A. polygon B. Nonagon C. pentagon 2. A circle is a polygon. A. Always true C. Never true B. Sometimes true D. Undetermined 3. Which figure below is a polygon ? A. B. C. D. a 8 B. square 4. If a diagonal of a polygon Intersects the exterior of the polygon, what can be concluded? A. It is concave, C. It is complex B. It is convex. D. It is not a polygon, 5. How many sides does undecagon have? A. 10 B. 11 C. 12 D, 13 6. A polygon with 5 sides. A Quadrilateral C. Triangle B. Pentagon D. Undecagon 7. A polygon with minimum number of sides is A. pentagon C. triangle D. angle 8. Polygons that have no portions of their diagonals in their exteriors are called A. square B. triangles C. convex D. concave 9. All sides of a regular polygons are A. parallel B. equal in length C. not parallel D. not equal 10. All angles of a regular polygons are of A. 90° B. 60° C. equal measure D. equal length 11. How many sides does a heptagon have ? A. 2 B4 C.7 D.5 12. How many diagonals does a regular hexagon has? A 2 B. 9 C.3 D.5 13. How many sides does a decagon has? A. 8 B. 10 C.6 D. 11 14. How many vertices does a regular octagon have? A. 7 B. 8 C9 D. 10 15. Which of the following is NOT a quality of a polygon? A. It is formed by three or more line segments called sides. B. Each side intersects exactly two sides, one at each endpoint, so that no two sides with a common endpoint are collinear. C. They are always have more than four sides. D. They are two dimensional.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.A</p><p>2.C</p><p>3B</p><p>4.B</p><p>5.A</p><p>6.B</p><p>7.Polygon</p><p>8C</p><p>9.B</p><p>10.C</p><p>11.C</p><p>12.B</p><p>13.B</p><p>14.B</p><p>15.C</p><p><strong>Step-by-step explanation:</strong></p><p>I'm not sure</p><br />
+                                            <h2 class="ez-toc-section" id="fact-or-bluff-write-fact-is-thestatement-is-true-and-bluff-if-the-statement-isfalse-1-polygon-is-a-close-figure-formedby-three-or-more-line-segments-and-no-linesegments-overlapped-2-if-every-line-s">
+                            16. FACT or BLUFF. Write FACT is thestatement is true and BLUFF if the statement isfalse.1. Polygon is a close figure formedby three or more line segments and no linesegments overlapped.2. If every line segment drawnbetween two points do not lie entirely insidethe figure is classified as concave polygon.3. Polygon can form with twosides.4. If polygon is hexagon thereforeit has seven vertices.5. All sides and angles are equal inregular polygon.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1). Fact</p><p>2). Bluff (convex polygon) </p><p>3). Bluff (3 or more) </p><p>4). Bluff (Hexagon have 6 vertices) </p><p>5). Fact</p><p><strong>Step-by-step explanation:</strong></p><p>sana nakatulong :&gt;</p><p>#CarryOnLearning</p><br />
+                                            <h2 class="ez-toc-section" id="directions-match-each-vocabulary-term-with-its-definition-write-the-letter-ofnumber-2-points-each1-the-part-of-a-conditional-statement-following-the-word-if%e2%80%9d-2-the-part-of-a-conditiona">
+                            17. Directions: Match each vocabulary term with its definition. Write the letter ofnumber. (2 POINTS each)1. The part of a conditional statement following the word "if”.2. The part of a conditional statement following the word "then".3. The process of reasoning that a rule or statement is true becausespecific cases are true. It draws conclusion from a pattern.4. A statement that can be written in the form "if p, then q," where p isthe hypothesis and q is the conclusion.5. An example that proves that a conjecture or statement is false.6. A statement that is believed to be true.7. a three-sided polygon.8. A closed plane figure formed by three or more segments such thateach segment intersects exactly two other segments only at theirendpoints and no two segments with a common endpoint are collinear.9. A four-sided polygon.10. The process of using logic to draw conclusions​</h2><br />
+                        <p><strong>Step-by-step explanation:</strong></p><p>sorry hindi ako mka answer BC ako</p><br />
+                                            <h2 class="ez-toc-section" id="the-following-is-correct-about-a-circlea-closed-plane-figure-composed-of-line-segments-outer-angesdes-a-closed-plane-figure-composed-of-points-that-are-equal-in-datacecode-is-a-closed-figure-with-a">
+                            18. the following is correct about a circle?a closed plane figure composed of line segments, outer angesdes a closed plane figure composed of points that are equal in datacecode is a closed figure with a center and an angle,Acide is a closed figure with a center and a base13. How do you call two polygons with the same size and shape?A regular polygonsC. irregular polygonsB congruent polygonsD. similar polygons14. Which of the polygons are congruent?сB.GEHFD. G and HC. D and 1B. D and G15. Based on the figure above, what polygon can be formed with combined B andB hexagonA segonC. heptagonDoctagon​</h2><br />
+                        <p></p>Answer:<p></p>13.A.14.C.15.B.<p></p>Sana makatulong<p></p>#Helping hand<br />
+                                            <h2 class="ez-toc-section" id="earning-task-2answer-the-following-questiocan-two-segments-form-a-polygon-if-yes-draw-the-figure-if-no-expwhat-is-the-minimum-number-of-non-collinear-segments-needed-ta-polygon-is-equilateral-ifa">
+                            19. EARNING TASK 2:Answer the following questioCan two segments form a polygon? If yes, draw the figure. If no, expWhat is the minimum number of non-collinear segments needed tA polygon is equilateral ifA Polygon is equiangular ifA Polygon is regular if​</h2><br />
+                        <p><strong>Answer:</strong></p><p></p><p>a polygon is equilateral if the sides of are equal</p><p>equilangular if it is congruent</p><p>a polygon is regular if the internal angles are equal</p><br />
+                                            <h2 class="ez-toc-section" id="11-which-of-these-figures-are-considered-as-convexpolygonsa-a-b-and-cbad-and-fc-b-c-andfd-d-and-e12-which-of-the-following-are-consecutive-vertices-ofpolygon-childa-h-andb-h-and-lc-i-and-d">
+                            20. 11. Which of these figures are considered as convexpolygons?A. a, b and cBad and fC. b, c andfD. d and e12. Which of the following are consecutive vertices ofpolygon CHILD?A. H andB. H and LC. I and DD. L and C13. Which of the following statements is TRUE aboutpolygon?A. Two line segments can be a polygon.B. No diagonal can be formed.C. It is a union of collinear segments.D. It is closed plane figure whose sides are linesegments joined at their endpoints.14. What is the sum of the exterior angles of a polygon?A. 360° 8. 180° C. 540° D. 720015. What is the sum of the measures of interior anglesof a triangle?A. 360°C. 180°B.540D.720°​pag na sagot mo meron kana ng points</h2><br />
+                        <p><strong>Answer:</strong></p><p>11. c </p><p>12.b</p><p>13.A</p><p>14.A</p><p>15.B</p><p><strong>Step-by-step explanation:</strong></p><p> yan kasi answer ko</p><p><strong>Answer:</strong></p><p>D</p><p>A</p><p>D</p><p>B</p><p>B</p><p><strong>Step-by-step explanation:</strong></p><p>pag male edi male kung nakikinig ka kase</p><br />
+                                            <h2 class="ez-toc-section" id="which-of-the-following-statement-is-true-about-polygona-two-line-segments-can-be-a-polygon-b-it-is-a-union-of-collinear-segments-c-no-diagonals-can-be-formed-d-it-is-closed-plane-figure">
+                            21. Which of the following statement is TRUE about polygon?
+A. Two line segments can be a polygon.
+B. It is a union of collinear segments.
+C. No diagonals can be formed.
+D. It is closed plane figure.</h2><br />
+                        <p><strong>Answer:</strong></p><p>A po this answer is helpful or not good</p><p><strong>Step-by-step explanation:</strong></p><p>two line segments can be a polygon answer is helpful</p><br />
+                                            <h2 class="ez-toc-section" id="gr-sec-score-read-each-item-carefully-choose-the-letter-of-the-correct-answer-1-a-closed-figure-formed-by-three-or-more-line-segments-joined-at-their-endpoints-a-polygon-b-quadrilateral-c">
+                            22. Gr.&amp;Sec. Score: Read each item carefully. Choose the letter of the correct answer. 1. A closed figure formed by three or more-line segments joined at their endpoints. a. Polygon b. Quadrilateral c. Parallelogram d. Trapezoid 2. A diagonal of a polygon is a line segment linking two non-consecutive vertices. a. always true b. sometimes true c. never true d. undetermined The following figures are examples of polygon except? 3. b. d. ^ 4. Which of the given figure is a polygon? b. a. C, d. 5. A polygon is if it is equilateral and equiangular. a. irregular polygon b. regular polygon c. convex d. concave 6. A polygon is if no diagonal can be found in the exterior of it. a. irregular polygon b. regular polygon c. convex d. concave 7. A polygon is if at least one diagonal can be found in the exterior of it. a. irregular polygon b. regular polygon C. convex d. concave 8. The following figures are models of convex polygon except? b. d. neo​</h2><br />
+                        <p><strong>Answer:</strong></p><p>Gr.&amp;Sec. Score: Read each item carefully. Choose the letter of the correct answer. 1. A closed figure formed by three or more-line segments joined at their endpoints. a. Polygon b. Quadrilateral c. Parallelogram d. Trapezoid 2. A diagonal of a polygon is a line segment linking two non-consecutive vertices. a. always true b. sometimes true c. never true d. undetermined The following figures are examples of polygon except? 3. b. d. ^ 4. Which of the given figure is a polygon? b. a. C, d. 5. A polygon is if it is equilateral and equiangular. a. irregular polygon b. regular polygon c. convex d. concave 6. A polygon is if no diagonal can be found in the exterior of it. a. irregular polygon b. regular polygon c. convex d. concave 7. A polygon is if at least one diagonal can be found in the exterior of it. a. irregular polygon b. regular polygon C. convex d. concave 8. The following figures are models of convex polygon except? b. d. neoGr.&amp;Sec. Score: Read each item carefully. Choose the letter of the correct answer. 1. A closed figure formed by three or more-line segments joined at their endpoints. a. Polygon b. Quadrilateral c. Parallelogram d. Trapezoid 2. A diagonal of a polygon is a line segment linking two non-consecutive vertices. a. always true b. sometimes true c. never true d. undetermined The following figures are examples of polygon except? 3. b. d. ^ 4. Which of the given figure is a polygon? b. a. C, d. 5. A polygon is if it is equilateral and equiangular. a. irregular polygon b. regular polygon c. convex d. concave 6. A polygon is if no diagonal can be found in the exterior of it. a. irregular polygon b. regular polygon c. convex d. concave 7. A polygon is if at least one diagonal can be found in the exterior of it. a. irregular polygon b. regular polygon C. convex d. concave 8. The following figures are models of convex polygon except? b. d. neoGr.&amp;Sec. Score: Read each item carefully. Choose the letter of the correct answer. 1. A closed figure formed by three or more-line segments joined at their endpoints. a. Polygon b. Quadrilateral c. Parallelogram d. Trapezoid 2. A diagonal of a polygon is a line segment linking two non-consecutive vertices. a. always true b. sometimes true c. never true d. undetermined The following figures are examples of polygon except? 3. b. d. ^ 4. Which of the given figure is a polygon? b. a. C, d. 5. A polygon is if it is equilateral and equiangular. a. irregular polygon b. regular polygon c. convex d. concave 6. A polygon is if no diagonal can be found in the exterior of it. a. irregular polygon b. regular polygon c. convex d. concave 7. A polygon is if at least one diagonal can be found in the exterior of it. a. irregular polygon b. regular polygon C. convex d. concave 8. The following figures are models of convex polygon except? b. d. neoGr.&amp;Sec. Score: Read each item carefully. Choose the letter of the correct answer. 1. A closed figure formed by three or more-line segments joined at their endpoints. a. Polygon b. Quadrilateral c. Parallelogram d. Trapezoid 2. A diagonal of a polygon is a line segment linking two non-consecutive vertices. a. always true b. sometimes true c. never true d. undetermined The following figures are examples of polygon except? 3. b. d. ^ 4. Which of the given figure is a polygon? b. a. C, d. 5. A polygon is if it is equilateral and equiangular. a. irregular polygon b. regular polygon c. convex d. concave 6. A polygon is if no diagonal can be found in the exterior of it. a. irregular polygon b. regular polygon c. convex d. concave 7. A polygon is if at least one diagonal can be found in the exterior of it. a. irregular polygon b. regular polygon C. convex d. concave 8. The following figures are models of convex polygon except? b. d. neo</p><br />
+                                            <h2 class="ez-toc-section" id="part-i-assessment-a-directions-write-the-letter-of-the-correct-answer-on-the-space-provided-before-each-number-1-a-closed-figure-formed-by-three-or-more-line-segments-a-polygon-b-nonagon-c-penta">
+                            23. Part I. ASSESSMENT A. Directions: Write the letter of the correct answer on the space provided before each number 1. A closed figure formed by three or more line segments A polygon B. Nonagon C. pentagon D. heragon 2. A circle is a polygon A. Always true B. Sometimes true 3. Which figure below is a polygon? C. Never true D. Undetermined A B 8 4. W a diagonal of a polygon intersects the exterior of the polygon, what can be a concluded? A. It is concave C. It is complex B. It is convex D. It is not a polygon 5 How many sides does undecagon have? A 10 B. 11 C. 12 D. 13 6. A polygon with 5 sides A Quadrilateral C. Triangle B. Pentagon D. Undecagon 7. A polygon with minimum number of sides is A. pentagon B. square C. triangle D. angle 8. Polygons that have no portions of their diagonals in their exteriors are called A. square B. triangles C. convex D.concave 9. All sides of a regular polygons are A parallel B. equal in length C. not parallel D. not equal 10. All angles of a regular polygons are of A. 90 B. 60 C.equal measure D. equal length 11. How many sides does a heptagon have ? A. 2 B.4 C.7 D.5 12. How many diagonals does a regular hexagon has? A 2 8.9 C.3 0.5 13. How many sides does a decagon has ? B. 10 C.6 D. 11 14. How many vertices does a regular octagon have? A.7 B.8 C9 D. 10 15. Which of the following is NOT a quality of a polygon? A. It is formed by three or more line segments called sides B. Each side intersects exactly two sides, one at each endpoint, so that no two sides with , a common endpoint are collinear. C. They are always have more than four sides. D. They are two dimensional​</h2><br />
+                        <p><strong>Answer:</strong></p>Mag ml kanalng <p></p><p><strong>Step-by-step explanation:</strong></p><p>ml na ml eh</p><br />
+                                            <h2 class="ez-toc-section" id="a-identification-identify-the-term-ask-for-1-are-three-dimensional-objects-this-means-is-that-solid-figures-have-a-width-a-depth-and-a-height-2-a-is-also-a-prism-with-congruent-squares-as-bas">
+                            24. A. Identification: Identify the term ask for. 1. are three-dimensional objects. This means is that solid figures have a width, a depth, and a height. 2. A is also a prism with congruent squares as bases (or sides) and lateral faces. 3. A is a polyhedron with exactly two faces that are congruent and parallel. These faces are called bases. 4. A is a polyhedron in which one face, also called the base, can be any polygon. 5. A has a circular base connected to a vertex. Suppose the base of a pyramid is a regular polygon. 6. A has two congruent or equal circular bases that are parallel. The following figure is a cylinder. 7. A is a figure with a curved surface in which all points on the surface are equal distance from the center. 8. A is two-dimensional and a solid figure is three-dimensional. 9. is a flat surface that forms part of the boundary of a solid object. 10. An is a line segment joining two vertex.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>congruent po lahat</p><p><strong>Step-by-step explanation:</strong></p><p>hope you have a great day ☺️</p><br />
+                                            <h2 class="ez-toc-section" id="activity-2-1-true-or-false-write-true-if-the-statement-is-correct-and-writefalse-if-the-statement-is-not-correct-1-circles-are-polygons-2-regular-polygons-have-congruent-sides-and-congruent-angles">
+                            25. Activity 2.1 True or False. Write TRUE if the statement is correct and writeFALSE if the statement is not correct.1) Circles are polygons.2) Regular polygons have congruent sides and congruent angles.3) A polygon can be formed by two line segments.4) Irregular polygons mean that no sides and angles are congruent.5) A regular polygon is a convex polygon.​</h2><br />
+                        <p>Answer:</p><p>1) false</p><p>2) true</p><p>3) false</p><p>4) false</p><p>5) false</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="what-i-have-learnedactivity-5-match-medirections-read-and-understand-each-statement-carefully-match-column-a-with-column-b-write-the-letter-of-your-answer-on-the-space-providedcolumn-bcolumn-a1-i">
+                            26. What I Have LearnedActivity 5: Match me!Directions: Read and understand each statement carefully. Match column A with column B.Write the letter of your answer on the space providedColumn BColumn A1. It is a closed figure made up of segments thatintersect at their endpoints and no two consecutivesegments are collinear.2. A point where two sides meet.3. It is a segment joining non-consecutivevertices.4. A polygon with all sides are equal.5. It is an angle formed by two adjacent sidesinside the polygon.6. It is an angle formed by two adjacent sidesoutside the polygon.7. A polygon with all angles are equal.8. It is a polygon with no vertices pointinginwards and no internal angle can be more than 180º.9. It is a polygon with any vertices pointinginwards and any internal angle can be more than 180°.10. It is both equilateral and equiangularA. Exterior AngleB. Regular PolygonC. EquilateralD. EquiangularE. SideF. DiagonalG. Interior AngleH. Convex1. PolygonJ. VertexK. Concave​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. a</p><p>2. j</p><p>3. f</p><p>4. b</p><p>5. g.</p><p>6.e</p><p>7.d</p><p>8. h</p><p>9. k</p><p>10. c</p><p><strong>Explanation:</strong></p><p> pa follow nlng</p><br />
+                                            <h2 class="ez-toc-section" id="a-point2-it-can-be-represented-by-a-flat-surface-that-extends-infinitely-in-all-directions-a-pointb-linec-plane3-it-is-the-intersection-of-two-or-more-lines-a-pointhlinec-plane4-it-can-be-form">
+                            27. a. point2. It can be represented by a flat surface that extends infinitely in all directions.a. pointb. linec. plane3. It is the intersection of two or more lines.a pointhlinec. plane4. It can be form when two distinct points are connected with a straight line.a. rayb. segmentc. angle5. Angle that measures exactly 90 degrees.a. acute angle b. right angle c. obtuse angle6. Pair of angles having a total measure of 180 degees.a. complementary angles b. supplementary angles C. vertical angles7. Pair of angles having a total measure of 90 degees.a. complementary angles b. supplementary angles c. vertical angles8. Two or more angles having the same measure.a. adjacent angles b. opposite angles C. congruent angles9. Pair of angles formed by intersecting lines and are congruent.a. adjacent angles b. opposite angles c.vertical angles10. Pair of angles having a common side.a. adjacent angles b. opposite angles c.vertical angles11. Adjacent angles forming a straight line.a. vertical angles b. linear pair C. opposite angles12. Intersecting lines forming a right angle.a. Vertical lines b. Parallel Lines c. Perpendicular Lines13. Lines that never intersect.a. Vertical lines b. Parallel Lines c. Perpendicular Lines14. A line that intersects two or more lines at different points.2.Transversal lines b. Parallel Lines c. Perpendicular Lines15. If two parallel lines are cut by a transversal, then the exterior angles on the same side of the transversalarea. supplementary b. congruent c. adjacent16. It is used to construct and measure angles.a. rulerb. protractorC. compass17. When constructing perpendicular and parallel lines it is best to useda. rulerb. protractor C. compass18. A polygon isif the segment joining any two points on the polygon lies completelyinside the polygon. a. convexb. concavec. regular19. A polygon isif the segment joining any two points on the polygon liesoutside the polygon. a. convexb. concavec. regular20. The total measure of the interior angle of a triangle isdegrees.a. 90b. 180C. 36021. The sum of all angles in a quadrilateral isdegrees.a. 90c. 36022. A polygon with ten sides is calleda. nonagonc. undecagon23. A star shape polygon hassides.b. 180b. decagon​</h2><br />
+                        <p><strong>Answer:</strong></p><p>2.b</p><p>3.c</p><p>4.a</p><p>5.b</p><p>6.obtuse angle</p><p><strong>Step-by-step explanation:</strong></p><p>pinag aaralan po namin yan</p><p></p><p></p><p></p><p><strong>Answer:</strong></p><p>2.C</p><p>3.A</p><p>4.A</p><p></p><p><strong>Step-by-step explanation:</strong></p><p>SANA MAKATULONG</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="dwhat-i-have-learnedactivity-5-match-medirections-read-and-understand-each-statement-carefully-match-column-a-withcolumn-b-write-the-letter-of-your-answer-on-the-space-provided-column-bcolumn-a1">
+                            28. DWhat I Have LearnedActivity 5: Match me!Directions: Read and understand each statement carefully. Match column A withcolumn B. Write the letter of your answer on the space provided.Column BColumn A1. It is a closed figure made up of segments thatintersect at their endpoints and no two consecutivesegments are collinear.2. A point where two sides meet.3. It is a segment joining non-consecutivevertices.4. A polygon with all sides are equal.5. It is an angle formed by two adjacent sidesinside the polygon.6. It is an angle formed by two adjacent sidesoutside the polygon.7. A polygon with all angles are equal.8. It is a polygon with no vertices pointinginwards and no internal angle can be more than 180°9. It is a polygon with any vertices pointinginwards and any internal angle can be more than 180°.10. It is both equilateral and equiangularA. Exterior AngleB. Regular PolygonC. EquilateralD. EquiangularE. SideF. DiagonalG. Interior AngleH. Convex1. PolygonJ. VertexK. Concave​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. I-Polygon</p><p>2. J-Vertex</p><p>3. F-Diagonal</p><p>4. C-Equilateral</p><p>5. G-Interior Angle</p><p>6. A-Exterior Angle</p><p>7. D-Equiangular </p><p>8. H-Convex</p><p>9. K-Concave​</p><p>10. B-Regular Polygon</p><p><strong>Step-by-step explanation:</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="write-math-if-the-statement-is-correct-and-wiz-if-the-statement-is-incorrect1-an-edge-is-formed-when-two-faces-meet-an-edge-is-a-straight-line-segment-2-a-pyramid-has-only-one-basewhich-can-also-any">
+                            29. Write Math if the statement is correct and WIZ if the statement is incorrect1.An edge is formed when two faces meet.An edge is a straight line segment.2.A pyramid has only one base,which can also any polygon.The other faces are rectangles which meet at a common vertex.3.A cube has 6 faces, 8 vertices and 12 edges 4.A cylinder has no face.5.A ployhedron is a solid figure where all faces are polygons.​</h2><br />
+                        <p>[tex]\huge{Question}[/tex]</p><p>Write <strong>MATH</strong> if the statement is correct and <strong>WIZ</strong> if the statement is incorrect</p><p></p><p>[tex]\colorbox{black}{\color{white}{ \boxed{Answer}}}[/tex]</p><p></p><p>1.An edge is formed when two faces meet.</p><strong>Math</strong><p>.An edge is a straight line segment</p><strong>Math</strong><p></p><p>2.A pyramid has only one base,which can also any polygon. </p><strong>Math</strong><p>The other faces are rectangles which meet at a common vertex.</p><strong>Wiz</strong><p></p><p>3.A cube has 6 faces, 8 vertices and 12 edges</p><strong>Math</strong><p></p><p>4.A cylinder has no face</p><strong>Wiz</strong><p></p><p>5.A ployhedron is a solid figure where all faces are polygons</p><strong>Wiz</strong><p></p>•••••••••••••••••••••••••••<p>[tex]\mathbb\color{gold}{@difficultytoMyself}[/tex]</p><br />
+                                            <h2 class="ez-toc-section" id="activity-5-read-and-analyze-the-questions-carefully-1-can-two-segments-form-a-polygon2-what-is-the-minimum-number-of-non-collinear-segments-needed-to-satisfy-thedefinition-of-a-polygon3-in-a-conv">
+                            30. Activity 5.Read and analyze the questions carefully.1. Can two segments form a polygon?2. What is the minimum number of non-collinear segments needed to satisfy thedefinition of a polygon?3. In a convex polygon, the do not go outside the figure.4. How many sides does an octagon have?5. Triangle:3 sides then: six sides​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. Can two segments form a polygon?</p><p><strong>-</strong><strong> </strong><strong>No</strong></p><p></p><p>2. What is the minimum number of non-collinear segments needed to satisfy the definition of a polygon?</p><p><strong>-</strong><strong> </strong><strong>3</strong></p><p></p><p>3. In a convex polygon, the do not go outside the figure.</p><p><strong>-</strong><strong> </strong><strong>wa</strong><strong> </strong><strong>ko</strong><strong> </strong><strong>kasabot</strong></p><p></p><p>4. How many sides does an octagon have?</p><p><strong>-</strong><strong> </strong><strong>8</strong></p><p></p><p>5. Triangle:3 sides then</p><p>: six sides</p><p><strong>-wa</strong><strong> </strong><strong>nasad</strong><strong> </strong><strong>ko</strong><strong> </strong><strong>kasabot</strong></p><p><strong>Step-by-step explanation:</strong></p><p>#walalangnaisipkolang</p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/46GYioC7pYY?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>math</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/white-man-s-burden-tagalog.html">White Man s Burden Tagalog</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/my-mother-s-views.html">My Mother s Views</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/label-the-drawing-corresponding-to-the-earth-s-layers.html">Label The Drawing Corresponding To The Earth s Layers</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/world-s-greatest-organist.html">World s Greatest Organist</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/if-a-business-has-clear-and-accurate-financial-records-i.html">If A Business Has Clear And Accurate Financial Records I</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/kabihasnan-example.html">Kabihasnan Example</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/patakarang-ipinatupad-ng-malaysia.html">Patakarang Ipinatupad Ng Malaysia</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/what-equation-describes-the-pattern.html">What Equation Describes The Pattern</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/a-neighbor-who-chose-to-stop-schooling-for-employment.html">A Neighbor Who Chose To Stop Schooling For Employment</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/ano-ang-dahilan-ng-mga-espanyol-sa-pananakop-sa-pilipinas.html">Ano Ang Dahilan Ng Mga Espanyol Sa Pananakop Sa Pilipinas</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/ano-ang-bunga-ng-kawalan-ng-komunikasyon.html">Ano Ang Bunga Ng Kawalan Ng Komunikasyon</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/epekto-ng-pagkakaroon-sa-pagkakasundo.html">Epekto Ng Pagkakaroon Sa Pagkakasundo</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/emma-watson-speech-gender-equality-brainly.html">Emma Watson Speech Gender Equality Brainly</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/kwento-tungkol-sa-diyos-at-diyosa.html">Kwento Tungkol Sa Diyos At Diyosa</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/uneven-twil.html">Uneven Twil</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/alin-sa-sumusunod-ang-kahulugan-ng-diskriminasyon.html">Alin Sa Sumusunod Ang Kahulugan Ng Diskriminasyon</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/pamumuhay-sa-africa.html">Pamumuhay Sa Africa</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/as-a-friend-of-angel-and-mike.html">As A Friend Of Angel And Mike</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/pagkakaiba-ng-kodigo-ni-hammurabi-at-manu.html">Pagkakaiba Ng Kodigo Ni Hammurabi At Manu</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/complete-the-graphic-organizer-below-in-your-answer-sheet.html">Complete The Graphic Organizer Below In Your Answer Sheet</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://tageducation.github.io"
+                            itemprop="url">QnA</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://tageducation.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://tageducation.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://tageducation.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://tageducation.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+    <script type='text/javascript' src='//jd3j7g5z1fqs.com/96/78/7a/96787a1945876b1a9c10f79941441964.js'></script>
+<script type='text/javascript' src='//jd3j7g5z1fqs.com/b4/f1/ef/b4f1ef8dfe59b7fa68754094cf6c8e0e.js'></script>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4739059,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4739059&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>

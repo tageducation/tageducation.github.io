@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Every Negative Integer Is Smaller Than Zero - QnA</title>
+    <meta name="description" content="Every Negative Integer Is Smaller Than Zero, , , , , , , 0, Number Theory: How do you prove that every integer greater than 1 is, www.quora.com, 602 x 828, jpeg, , 20, every-negative-integer-is-smaller-than-zero, QnA" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Every Negative Integer Is Smaller Than Zero - QnA" />
+    <meta property="og:description" content="Every Negative Integer Is Smaller Than Zero, , , , , , , 0, Number Theory: How do you prove that every integer greater than 1 is, www.quora.com, 602 x 828, jpeg, , 20, every-negative-integer-is-smaller-than-zero, QnA" />
+    <meta property="og:site_name" content="QnA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Every Negative Integer Is Smaller Than Zero - QnA" />
+    <meta name="twitter:description" content="Every Negative Integer Is Smaller Than Zero, , , , , , , 0, Number Theory: How do you prove that every integer greater than 1 is, www.quora.com, 602 x 828, jpeg, , 20, every-negative-integer-is-smaller-than-zero, QnA" />
+    <link rel='stylesheet' id='generate-style-css' href='https://tageducation.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://tageducation.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://tageducation.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://tageducation.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://tageducation.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://tageducation.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://tageducation.github.io">Home</a></li>
+                        </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://tageducation.github.io" rel="home"> QnA</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Every Negative Integer Is Smaller Than Zero</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">jamaicahmedallada</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Every+Negative+Integer+Is+Smaller+Than+Zero" alt="Every Negative Integer Is Smaller Than Zero">
+                    </div>
+                    <p></p>
+                    <p>every negative integer is smaller than zero​</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#every-negative-integer-is-smaller-than-zero%e2%80%8b">1.
+                                            every negative integer is smaller than zero​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#every-negative-integer-is-smaller-than-zero">2.
+                                            every negative integer is smaller than zero</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#5-every-negative-integer-is-smaller-than-zero%e2%80%8b">3.
+                                            5. Every negative integer is smaller than zero​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#a-state-whether-each-statement-is-true-or-false-1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is-1000-3-all-numbers-greater-than-zero-are-positive-integers-4-the-repeatin">4.
+                                            A. State whether each statement is true or false.1. The smallest negative integer is -1.2. The largest negative integer is - 1000.3. All numbers greater than zero are positive integers.4. The repeating decimal 0.1616... is a rational number.5. The number pi is an irrational number 6. Every negative integer is smaller than zero.7. Irrational numbers can be found on the number line.8. Decimal numbers are integers.9. The real number /625 is irrational.10. Zero is a natural number.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is1-000-3-all-numbers-greater-than-zero-are-positive-integers-4-the-repeating-decimal-0-1616-is-a-rational-number5-the-numb">5.
+                                            1. The smallest negative integer is -1.2. The largest negative integer is1 000.3. All numbers greater than zero are positive integers.4. The repeating decimal 0.1616... is a rational number5. The number pi is an irrational number6. Every negative integer is smaller than zero.7. Irrational numbers can be found on the number line.8. Decimal numbers are integers.6259. The real numberis irrational10. Zero is a natural number.al numbers in increasing order​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#a-state-whether-each-statement-is-true-or-false-_________1-all-numbers-greater-than-zero-are-positive-integers-_________3-the-repeating-decimal-0-1616%e2%80%a6-is-a-rational-number-_________5">6.
+                                            A. State whether each statement is true or false. 
+_________1. All numbers greater than zero are positive integers. 
+_________3. The repeating decimal 0.1616… is a rational number. 
+_________5. The number pi is an irrational number 
+_________4. Every negative integer is smaller than zero. 
+_________5. Decimal numbers are integers.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#learning-task-2-a-state-whether-each-statement-is-true-or-false-1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is-1-000-3-all-numbers-greater-than-zero-are-positive-intege">7.
+                                            Learning Task 2. A. State whether each statement is true or false.1. The smallest negative integer is -1.2. The largest negative integer is - 1 000.3. All numbers greater than zero are positive integers.4. The repeating decimal 0.1616... is a rational number.5. The number pi is an irrational number6. Every negative integer is smaller than zero.7. Irrational numbers can be found on the number line.8. Decimal numbers are integers.6259. The real numberis irrational.10. Zero is a natural number.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#arning-task-2-a-state-whether-each-statement-is-true-or-false-1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is-1-000-3-all-numbers-greater-than-zero-are-positive-integers">8.
+                                            arning Task 2. A. State whether each statement is true or false.1. The smallest negative integer is -1.2. The largest negative integer is - 1 000.3. All numbers greater than zero are positive integers.4. The repeating decimal 0.1616... is a rational number.5. The number pi is an irrational number6. Every negative integer is smaller than zero.7. Irrational numbers can be found on the number line.8. Decimal numbers are integers.76259. The real numberis irrational.10. Zero is a natural number.e each set of real numbers in increasing order.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#weer-2-arranges-real-humtrue-or-falsedirections-state-whether-each-statement-is-true-or-false-1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is-1000-3-the-number-pi-tt-i">9.
+                                            WEER ?2. Arranges real HumTRUE OR FALSEDirections: State whether each statement is true or false.1. The smallest negative integer is -1.2. The largest negative integer is -1000.3. The number pi (Tt) is an irrational number.4. Every negative integer is smaller than zero.5. All numbers greater than zero are positive integers.6. Zero is a natural number.7. The real number V625 is irrational,TRY IT OUT!​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#true-or-falseevery-negative-integer-is-smaller-than-zero">10.
+                                            True or False?
+Every negative integer is smaller than zero</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#true-or-false6-every-negative-integer-is-smaller-than-zero-7-irrational-numbers-can-be-found-on-the-number-line-8-decimal-numbers-are-integers-9-the-real-number-tex-sqrt625-texis-irrational-10">11.
+                                            True or False6.Every Negative integer is smaller than Zero.7.Irrational numbers can be found on the number line.8.Decimal Numbers are integers.9.The real number [tex] \sqrt{625} [/tex]is irrational.10.Zero is natural Number.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#true-or-false6-every-negative-integer-is-smaller-than-zero7-irrational-numbers-can-be-found-on-the-number-line8-decimal-numbers-are-integers9-the-real-number-is-irrationaltex-sqrt-625-tex">12.
+                                            true or false6.every negative integer is smaller than zero?7.Irrational numbers can be found on the number line?8.Decimal numbers are integers?9.The real number is irrational?[tex]  \sqrt{} 625 [/tex]10.Zero is natural number?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tate-whether-each-statement-is-true-or-false-1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is-%e2%80%93-1-000-3-all-numbers-greater-than-zero-are-positive-integers-4-the-re">13.
+                                            tate whether each statement is true or false.1. The smallest negative integer is -1.
+2. The largest negative integer is – 1 000 3. All numbers greater than zero are positive integers.4. The repeating decimal 0.1616… is a rational number.5. The number pi is an irrational number6. Every negative integer is smaller than zero.
+7. Irrational numbers can be found on the number line.8. Decimal numbers are integers.10. Zero is a natural number.
+9. The real number is irrational.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#true-or-false-1-the-largest-negative-integers-is-1-000-2-all-numbers-greater-than-zero-are-positive-integers-3-the-repeating-decimal-0-1616-is-a-rational-number-4-the-number-pi-is-an-irrationa">14.
+                                            True or false 1. The largest negative integers is 1 000.2. All numbers greater than zero are positive integers .3. The repeating decimal 0.1616... is a rational number 4. The number pi is an irrational number 5. Every negative integers is smaller than zero.6. Irrational numbers can be found on the number line. 7. Decimal numbers are integers8. The real number is irrational.9. Zero is a natural number​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#learning-task-2-a-state-whether-each-statement-is-true-or-false-e1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is-1-000-3-all-numbers-greater-than-zero-are-positive-integ">15.
+                                            Learning Task 2. A. State whether each statement is true or false.E1. The smallest negative integer is -1.2. The largest negative integer is - 1 000.3. All numbers greater than zero are positive integers.4. The repeating decimal 0.1616... is a rational number5. The number pi is an irrational number6. Every negative integer is smaller than zero.7. Irrational numbers can be found on the number lin8. Decimal numbers are integers.J6259. The real numberis irrational.10. Zero is a natural number.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#learning-task-2-a-state-whether-each-statement-is-true-or-false-1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is-1-000-3-all-numbers-greater-than-zero-are-positive-int">16.
+                                            Learning Task 2. A. State whether each statement is true or false, 1. The smallest negative integer is -1. 2. The largest negative integer is - 1 000. 3. All numbers greater than zero are positive integers. 4. The repeating decimal 0.1616... is a rational number. 5. The number pi is an irrational number 6. Every negative integer is smaller than zero. 7. Irrational numbers can be found on the number line. 8. Decimal numbers are integers. 9. The real number 625 is irrational. 10. Zero is a natural number.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#true-or-false___1-the-smallest-negative-integer-is-1-___2-the-largest-negative-integer-is-1-000-___3-all-numbers-greater-than-zero-are-positive-integers-___4-the-repeating-decimal-0-1-6-1-6">17.
+                                             True Or False___1.The smallest negative integer is -1.___2. The largest negative integer is -1 000.___3.All numbers greater than zero are positive integers.___4.The repeating decimal 0. 1 6 1 6. . . is a rational number.___5.The number pi as an irrational number.___6.Every negative integer is smaller than zero.___7.Irrational numbers can be found on the number line.___8.Decimal numbers are integers.___9.The real number √625 is irrational.___10.Zero is a natural number. ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#learning-task-2-a-state-whether-each-statement-is-true-or-false-e1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is-1-000-3-all-numbers-greater-than-zero-are-positive-integ">18.
+                                            Learning Task 2. A. State whether each statement is true or false.E1. The smallest negative integer is -1.2. The largest negative integer is - 1 000.3. All numbers greater than zero are positive integers.4. The repeating decimal 0.1616... is a rational number.5. The number pi is an irrational number6. Every negative integer is smaller than zero.7. Irrational numbers can be found on the number line.8. Decimal numbers are integers.16259. The real number is irrational10. Zero is a natural number.Man​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#state-whether-each-statement-is-true-or-false-_____1-the-smallest-negative-integer-is-1-_____2-the-largest-negative-integer-is-1-000-_____3-all-numbers-greater-than-zero-are-positive-integers">19.
+                                            State whether each statement is TRUE or FALSE.
+_____1. the smallest negative integer is -1.
+_____2. the largest negative integer is - 1 000.
+_____3. all numbers greater than zero are positive integers.
+_____4. the repeating decimal 0. 1616... is a rational number.
+_____5. the number pi is an irrational number
+_____6. every negative integer is smaller than zero.
+_____7. Irrational numbers can be found on the number line.
+_____8. Decimal numbers are integers.
+_____9 the real number √625 is irrational 
+_____10. Zero is a real number.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#which-of-the-following-is-a-true-statement-a-zero-is-a-natural-number-b-the-repeating-decimal-0-16-16-is-an-irrational-number-c-decimal-numbers-are-integers-d-every-negative-integer-is-smaller-tha">20.
+                                            which of the following is a true statement A. Zero is a natural number B. the repeating decimal 0.16 16 is an irrational number C. decimal numbers are integers D. every negative integer is smaller than zero ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#learning-task-2-a-state-whether-each-statement-is-true-or-false-___1-the-smallest-negative-integer-is-1___2-the-largest-negative-integer-is-1000___3-all-numbers-greater-than-zero-are-positiv">21.
+                                            Learning Task 2. A. State whether each statement is true or false.
+___1. The smallest negative integer is -1
+___2. The largest negative integer is -1000
+___3. All numbers greater than zero are positive integers
+___4. The repeating decimal 0.1616...is a rational number
+___5. The number pi is an irrational number 
+___6. Every negative integer is smaller than zero 
+___7. Irrational numbers can be found on the number line.
+___8. Decimal numbers are integers.
+( NONSENSE ANSWER WILL BE REPORTED !! )</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#te-whether-each-statement-is-true-or-false-_________1-the-smallest-negative-integer-is-1-_________2-the-largest-negative-integer-is-%e2%80%93-1-000-_________3-all-numbers-greater-than-zero-are">22.
+                                            te whether each statement is true or false. _________1. The smallest negative integer is -1. _________2. The largest negative integer is – 1 000. _________3. All numbers greater than zero are positive integers. _________4. The repeating decimal 0.1616… is a rational number. _________5. The number pi is an irrational number _________6. Every negative integer is smaller than zero. _________7. Irrational numbers can be found on the number line. _________8. Decimal numbers are integers. _________9. The real number is irrational. _________10. Zero is a natural number</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#learning-task-2-a-state-whether-each-statement-is-true-or-false-_____1-the-smallest-negative-integer-is-1-_____2-the-largest-negative-integer-is-1-000-_____3-all-numbers-greater-than-zero-are">23.
+                                            Learning Task 2. A. State whether each statement is true or false._____1. The smallest negative integer is -1._____2. The largest negative integer is - 1 000._____3. All numbers greater than zero are positive integers._____4. The repeating decimal 0.1616... is a rational number._____5. The number pi is an irrational number._____6. Every negative integer is smaller than zero._____7. Irrational numbers can be found on the number line._____8. Decimal numbers are integers._____9. The real number √625 is irrational._____10. Zero is a natural number.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#alog-task-2-a-state-whether-each-statement-is-true-or-false-1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is-1-000-3-all-numbers-greater-than-zero-are-positive-integers4">24.
+                                            alog Task 2. A. State whether each statement is true or false.1. The smallest negative integer is -1.2. The largest negative integer is - 1 000.3. All numbers greater than zero are positive integers4. The repeating decimal 0.1616... is a rational nur5. The number pi is an irrational number6. Every negative integer is smaller than zero.7. Irrational numbers can be found on the numbe10. Zero is a natural number.Targe each set of real numbers in increasing order.8. Decimal numbers are integers.9. The real numberreal625is irrational.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#every-negative-integer-is-smaller-than-zero-true-or-false">25.
+                                            Every negative integer is smaller than zero true or false</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#every-negative-integer-is-smaller-than-zero-it-is-true-or-false%e2%80%8b">26.
+                                            every negative integer is smaller than zero it is true or false​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#learning-task-2-a-state-whether-each-statement-is-true-or-false-1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is-%e2%80%93-1-000-3-all-numbers-greater-than-zero-are-positiv">27.
+                                            Learning Task 2. A. State whether each statement is true or false.1. The smallest negative integer is -1.2. The largest negative integer is – 1 000.3. All numbers greater than zero are positive integers.4. The repeating decimal 0.1616... is a rational number.5. The number pi is an irrational number6. Every negative integer is smaller than zero.7. Irrational numbers can be found on the number line.8. Decimal numbers are integers.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#true-or-false6-every-negative-integer-is-smaller-than-zero-7-irrational-numbers-can-be-found-on-the-number-line-8-decimal-numbers-are-integers-9-the-real-number-%e2%88%9a625-is-irrational-10-zero">28.
+                                            True or false6.Every negative integer  is smaller than zero. 7.Irrational numbers can be found on the number line. 8.Decimal numbers are integers. 9.The real number √625 is irrational. 10.Zero is a natural number. ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#24-which-statement-is-truea-zero-is-both-positive-and-negative-numberb-every-positive-integer-is-smaller-than-anynegative-integerc-c-positive-integers-are-all-whole-numbers-smallerthan-zerod-po">29.
+                                            24. Which statement is TRUE?a. Zero, is both positive and negative numberb. Every positive integer is smaller than anynegative integerC.c. Positive integers are all whole numbers smallerthan zerod. Positive integers are all whole numbers greaterthan zero.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#state-whether-each-statement-is-true-or-false1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is-1000-3-all-numbers-greater-than-zero-are-positive-integer-4-the-repeating-decimal">30.
+                                            State whether each statement is true or false1.The smallest negative integer is -1.2.The largest negative integer is -1000.3.All numbers greater than zero are positive integer.4.The repeating decimal 0.1616 is rational number.5.The number pi is an irrational number.6.Every negative integer is smaller than zero.7.Irrational numbers can be found on the number line.8.Decimal numbers are integers.9.The real number √625 is irrational.10.Zero is a natural number​</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="every-negative-integer-is-smaller-than-zero%e2%80%8b">
+                            1. every negative integer is smaller than zero​</h2><br />
+                        <p>Positive and negative numbers are all integers. Integers are whole numbers that are either greater than zero (positive) or less than zero (negative). For every positive integer, there's a negative integer, called an additive inverse, that is an equal distance from zero. ... Negative numbers are smaller than zero.</p><br />
+                                            <h2 class="ez-toc-section" id="every-negative-integer-is-smaller-than-zero">
+                            2. every negative integer is smaller than zero</h2><br />
+                        <p><strong>Answer:</strong></p><p>An integer is a whole number that can be either greater than 0, called positive, or less than 0, called negative.</p><p><strong>Step-by-step explanation:</strong></p><p>An integer is a whole number that can be either greater than 0, called positive, or less than 0, called negative. Zero is neither positive nor negative. ... Zero is called the origin, and it's neither negative nor positive. For every positive integer, there's a negative integer an equal distance from the origin.
+</p><p></p><p><strong>Answer: </strong></p><p><strong>yes </strong></p><p><strong>Explanation: </strong></p><p><strong>because if you saw a integer line the negative integers is behind the zero</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="5-every-negative-integer-is-smaller-than-zero%e2%80%8b">
+                            3. 5. Every negative integer is smaller than zero​</h2><br />
+                        <p>Positive and negative numbers are all integers. Integers are whole numbers that are either greater than zero (positive) or less than zero (negative). For every positive integer, there's a negative integer, called an additive inverse, that is an equal distance from zero. ... Negative numbers are smaller than zero.</p><p></p><p></p><p></p><p></p><p><strong>Answer:</strong></p><p><strong>TRUE</strong></p><p></p><p><strong>Expla</strong><strong>nation</strong><strong>:</strong></p><p><strong> </strong><strong> </strong>Positive and negative numbers are all integers. Integers are whole numbers that are either greater than zero (positive) or less than zero (negative).</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="a-state-whether-each-statement-is-true-or-false-1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is-1000-3-all-numbers-greater-than-zero-are-positive-integers-4-the-repeatin">
+                            4. A. State whether each statement is true or false.1. The smallest negative integer is -1.2. The largest negative integer is - 1000.3. All numbers greater than zero are positive integers.4. The repeating decimal 0.1616... is a rational number.5. The number pi is an irrational number 6. Every negative integer is smaller than zero.7. Irrational numbers can be found on the number line.8. Decimal numbers are integers.9. The real number /625 is irrational.10. Zero is a natural number.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.False</p><p>2.True</p><p>3.True</p><p>4.False</p><p>5.True</p><p>6.False</p><p>7.True</p><p>8. Di ko po alam eh sowwy :&lt;</p><p>9. Di q po sure ung isasagot ko :&lt;</p><p>10.False</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is1-000-3-all-numbers-greater-than-zero-are-positive-integers-4-the-repeating-decimal-0-1616-is-a-rational-number5-the-numb">
+                            5. 1. The smallest negative integer is -1.2. The largest negative integer is1 000.3. All numbers greater than zero are positive integers.4. The repeating decimal 0.1616... is a rational number5. The number pi is an irrational number6. Every negative integer is smaller than zero.7. Irrational numbers can be found on the number line.8. Decimal numbers are integers.6259. The real numberis irrational10. Zero is a natural number.al numbers in increasing order​</h2><br />
+                        <p><strong>Explanation:</strong></p><p></p><p></p><strong>1.</strong><strong>F</strong><strong>a</strong><strong>l</strong><strong>s</strong><strong>e</strong><strong>2.</strong><strong>F</strong><strong>a</strong><strong>l</strong><strong>s</strong><strong>e</strong><strong>3.</strong><strong>T</strong><strong>r</strong><strong>u</strong><strong>e</strong><strong> </strong><strong>4.</strong><strong>T</strong><strong>r</strong><strong>u</strong><strong>e</strong><strong>5.</strong><strong>T</strong><strong>r</strong><strong>u</strong><strong>e</strong><strong> </strong><strong>6.</strong><strong>T</strong><strong>r</strong><strong>u</strong><strong>e</strong><strong>7.</strong><strong>T</strong><strong>r</strong><strong>u</strong><strong>e</strong><strong> </strong><strong>8.</strong><strong>F</strong><strong>a</strong><strong>l</strong><strong>s</strong><strong>e</strong><strong>9.</strong><strong>T</strong><strong>r</strong><strong>u</strong><strong>e</strong><strong> </strong><strong>10.</strong><strong>T</strong><strong>r</strong><strong>u</strong><strong>e</strong><p></p><p></p><p></p><p><strong>sana </strong><strong>makatulong</strong></p><p></p><p></p><p><strong>#</strong><strong>CarryOnLearning</strong></p><br />
+                                            <h2 class="ez-toc-section" id="a-state-whether-each-statement-is-true-or-false-_________1-all-numbers-greater-than-zero-are-positive-integers-_________3-the-repeating-decimal-0-1616%e2%80%a6-is-a-rational-number-_________5">
+                            6. A. State whether each statement is true or false. 
+_________1. All numbers greater than zero are positive integers. 
+_________3. The repeating decimal 0.1616… is a rational number. 
+_________5. The number pi is an irrational number 
+_________4. Every negative integer is smaller than zero. 
+_________5. Decimal numbers are integers.</h2><br />
+                        I. FALSE because those greater than zero have decimals in addition to positive integers<br />2. true. because infinitel1 reconning decimals are rational numbers<br />3. TRUE because pt is an infinite non-recurring decimal<br />4. TRUE because each negative number is smaller than Zero<br />5. FALSE because there are decimals in decimal numbers<p><strong>Answer:</strong></p><p>1. The whole numbers greater than 0 are called positive integers . Their opposites, which are less than 0 , are called negative integers . Zero is neither positive nor  negative.<strong> </strong><strong>True</strong></p><p>3. <strong> </strong><strong>True</strong></p><p></p><p>5.  The value of pi is approximately 3.14 or 22/7. To 39 decimal places, pi is 3.141592653589793238462643383279502884197. Pi is an irrational number, which means it is not equal to the ratio of any two whole numbers. Its digits do not repeat.True is the answer</p><p>4. Positive and negative numbers are all integers. Integers are whole numbers that are either greater than zero (positive) or less than zero (negative). For every positive integer, there's a negative integer, called an additive inverse, that is an equal distance from zero. ... Negative numbers are smaller than zero.True is the answer</p><p>5. Fractions and decimals are not integers. All whole numbers are integers (and all natural numbers are integers), but not all integers are whole numbers or natural numbers. For example, -5 is an integer but not a whole number or a natural number.False is that answer</p><p></p><p><strong>Step-by-step explanation:</strong></p><p>hope it helps</p><p>carry on learning</p><p>brainliest</p><p>follow</p><br />
+                                            <h2 class="ez-toc-section" id="learning-task-2-a-state-whether-each-statement-is-true-or-false-1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is-1-000-3-all-numbers-greater-than-zero-are-positive-intege">
+                            7. Learning Task 2. A. State whether each statement is true or false.1. The smallest negative integer is -1.2. The largest negative integer is - 1 000.3. All numbers greater than zero are positive integers.4. The repeating decimal 0.1616... is a rational number.5. The number pi is an irrational number6. Every negative integer is smaller than zero.7. Irrational numbers can be found on the number line.8. Decimal numbers are integers.6259. The real numberis irrational.10. Zero is a natural number.​</h2><br />
+                        <p></p><p>[tex] \huge{\color{red}{ \boxed{ \colorbox{pink}{ANSWER}}}}[/tex]</p><p></p><p></p><p><strong>Learning Task 2 A.</strong></p><p><strong>1. False</strong></p><p><strong>2. False</strong></p><p><strong>3. True</strong></p><p><strong>4. True</strong></p><p><strong>5. True</strong></p><p><strong>6. True</strong></p><p><strong>7. False</strong></p><p><strong>8. False</strong></p><p><strong>9. False</strong></p><p><strong>10. False</strong></p><br />
+                                            <h2 class="ez-toc-section" id="arning-task-2-a-state-whether-each-statement-is-true-or-false-1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is-1-000-3-all-numbers-greater-than-zero-are-positive-integers">
+                            8. arning Task 2. A. State whether each statement is true or false.1. The smallest negative integer is -1.2. The largest negative integer is - 1 000.3. All numbers greater than zero are positive integers.4. The repeating decimal 0.1616... is a rational number.5. The number pi is an irrational number6. Every negative integer is smaller than zero.7. Irrational numbers can be found on the number line.8. Decimal numbers are integers.76259. The real numberis irrational.10. Zero is a natural number.e each set of real numbers in increasing order.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. F</p><p>2. F </p><p>3. T</p><p>4. T</p><p>5. T</p><p>6. T</p><p>7. F</p><p>8. F</p><p>9. F</p><p>10. F</p><br />
+                                            <h2 class="ez-toc-section" id="weer-2-arranges-real-humtrue-or-falsedirections-state-whether-each-statement-is-true-or-false-1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is-1000-3-the-number-pi-tt-i">
+                            9. WEER ?2. Arranges real HumTRUE OR FALSEDirections: State whether each statement is true or false.1. The smallest negative integer is -1.2. The largest negative integer is -1000.3. The number pi (Tt) is an irrational number.4. Every negative integer is smaller than zero.5. All numbers greater than zero are positive integers.6. Zero is a natural number.7. The real number V625 is irrational,TRY IT OUT!​</h2><br />
+                        <p>1:TRUE</p><p>2:TRUE</p><p>3:FALSE</p><p>4:TRUE</p><p>5:TRUE</p><p>6:FALSE</p><p>7:TRUE</p><br />
+                                            <h2 class="ez-toc-section" id="true-or-falseevery-negative-integer-is-smaller-than-zero">
+                            10. True or False?
+Every negative integer is smaller than zero</h2><br />
+                        <p>false</p><p><strong>Step-by-step explanation:</strong></p><p>tama po ito none. none.</p><br />
+                                            <h2 class="ez-toc-section" id="true-or-false6-every-negative-integer-is-smaller-than-zero-7-irrational-numbers-can-be-found-on-the-number-line-8-decimal-numbers-are-integers-9-the-real-number-tex-sqrt625-texis-irrational-10">
+                            11. True or False6.Every Negative integer is smaller than Zero.7.Irrational numbers can be found on the number line.8.Decimal Numbers are integers.9.The real number [tex] \sqrt{625} [/tex]is irrational.10.Zero is natural Number.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>True</p><p>True</p><p>False</p><p>False</p><p>True</p><p>umm yeah... nevermind</p><br />
+                                            <h2 class="ez-toc-section" id="true-or-false6-every-negative-integer-is-smaller-than-zero7-irrational-numbers-can-be-found-on-the-number-line8-decimal-numbers-are-integers9-the-real-number-is-irrationaltex-sqrt-625-tex">
+                            12. true or false6.every negative integer is smaller than zero?7.Irrational numbers can be found on the number line?8.Decimal numbers are integers?9.The real number is irrational?[tex]  \sqrt{} 625 [/tex]10.Zero is natural number?​</h2><br />
+                        <p><strong>Answer:</strong></p><p>6. True</p><p>7. True</p><p>8. False</p><p>9. False</p><p>10. True</p><p></p><p>#</p><br />
+                                            <h2 class="ez-toc-section" id="tate-whether-each-statement-is-true-or-false-1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is-%e2%80%93-1-000-3-all-numbers-greater-than-zero-are-positive-integers-4-the-re">
+                            13. tate whether each statement is true or false.1. The smallest negative integer is -1.
+2. The largest negative integer is – 1 000 3. All numbers greater than zero are positive integers.4. The repeating decimal 0.1616… is a rational number.5. The number pi is an irrational number6. Every negative integer is smaller than zero.
+7. Irrational numbers can be found on the number line.8. Decimal numbers are integers.10. Zero is a natural number.
+9. The real number is irrational.</h2><br />
+                        <p><strong>Answer:</strong></p><p>A. State whether each statement is true or false.</p><p>1. The smallest negative integer is -1.</p><p></p><p>2. The largest negative integer is - 1000.</p><p></p><p>3. All numbers greater than zero are positive integers.</p><p></p><p>4. The repeating decimal 0.1616... is a rational number.</p><p></p><p>5. The number pi is an irrational number</p><p></p><p>6. Every negative integer is smaller than zero.</p><p></p><p>7. Irrational numbers can be found on the number line.</p><p></p><p>8. Decimal numbers are integers.</p><p></p><p></p><p>9. The real number /625 is irrational.</p><p></p><p>10. Zero is a natural number.</p><p>​</p><p><strong>Step-by-step explanation:</strong></p><p>is this correct?</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="true-or-false-1-the-largest-negative-integers-is-1-000-2-all-numbers-greater-than-zero-are-positive-integers-3-the-repeating-decimal-0-1616-is-a-rational-number-4-the-number-pi-is-an-irrationa">
+                            14. True or false 1. The largest negative integers is 1 000.2. All numbers greater than zero are positive integers .3. The repeating decimal 0.1616... is a rational number 4. The number pi is an irrational number 5. Every negative integers is smaller than zero.6. Irrational numbers can be found on the number line. 7. Decimal numbers are integers8. The real number is irrational.9. Zero is a natural number​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.True</p><p>2.True</p><p>3.True</p><p>4.False</p><p>5.True</p><p>6.False</p><p>7.False</p><p>8.True</p><p>9.False</p><p><strong>Step-by-step explanation:</strong></p><p>I hope it helps</p><p>#CarryOnLearning</p><br />
+                                            <h2 class="ez-toc-section" id="learning-task-2-a-state-whether-each-statement-is-true-or-false-e1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is-1-000-3-all-numbers-greater-than-zero-are-positive-integ">
+                            15. Learning Task 2. A. State whether each statement is true or false.E1. The smallest negative integer is -1.2. The largest negative integer is - 1 000.3. All numbers greater than zero are positive integers.4. The repeating decimal 0.1616... is a rational number5. The number pi is an irrational number6. Every negative integer is smaller than zero.7. Irrational numbers can be found on the number lin8. Decimal numbers are integers.J6259. The real numberis irrational.10. Zero is a natural number.​</h2><br />
+                        <p><strong>Numbers</strong></p><p></p><p>1. The smallest negative integer is -1. <strong>Wrong</strong> statement.</p><p>2. The largest negative integer is - 1 000. <strong>Wrong</strong> statement.</p><p>3. All numbers greater than zero are positive integers. <strong>Wrong</strong> statement.</p><p>4. The repeating decimal 0.1616... is a rational number. <strong>True statement.</strong></p><p>5. The number pi is an irrational number. <strong>True statement.</strong></p><p>6. Every negative integer is less than zero. <strong>True statement.</strong></p><p>7. Irrational numbers can be found on the number line. <strong>True statement.</strong></p><p>8. Decimal numbers are whole numbers. <strong>Wrong statement.</strong></p><p>9. Natural numbers are irrational. <strong>Wrong statement.</strong></p><p>10. Zero is a natural number. <strong>Wrong statement.</strong></p><p>Let's discuss one by one the answer to the true or false statement of the 10 questions above.</p><p>1. Integers consist of whole numbers and negative integers. The number of membership is unlimited. (…,-5,-4,-3,-2,-1,0,1,2,3,4,…). So the smallest negative integer is not -1 but infinity because -2&lt;-1, -100&lt;-1, which is true is the largest integer.</p><p>2. The largest negative integer is - 1 000, which is a false statement. The explanation is the same as number 1.</p><p>3. All numbers greater than zero are positive integers. <strong>This too is a false </strong>statement. Why? [tex]\frac{1}{2}[/tex]&gt;0 but [tex]\frac{1}{2}[/tex] is not an integer, it is a fraction. 2&gt;0 but 2 is not an integer. So not every number greater than 0 is a positive integer.</p><p>4. The repeating decimal 0.1616... is a rational number. <strong>This is a true statement,</strong> because one of the characteristics of rational numbers is that the number can be converted into an ordinary fraction (a/b) and if this number is converted to a decimal fraction, the number will stop at a certain number. If it does not stop, it will form a repeating pattern. And 0.1616… is a form of repetition pattern.</p><p>Let's find the fraction form 0.1616..</p><p>Multiply 0.1616 by 10=1.6161…</p><p>Multiply by 1000=161,6161…</p><p>1000-10=161.6161-1.6161.</p><p>990=160.</p><p>99=16=16/99.</p><p>5. The number pi (Π) is an irrational number. <strong>This statement is true </strong>because the value of =3.141592653589… the number after the comma does not stop at a number.</p><p>6. Every negative integer is less than zero. <strong>This is a true statement, </strong>because all negative numbers are to the left of 0 on the number line. (…,-5,-4,-3,-2,-1,0,1,2,3,4,…).</p><p>7. Irrational numbers can be found on the number line. <strong>This is a true statement</strong> because irrational numbers are real numbers. And all real numbers can be found on the number line.</p><p>8. Decimal numbers are whole numbers. <strong>Wrong statement.</strong> Because the whole number consists of natural integers, zero, and negative integers. Therefore, decimal numbers are not included in the set of integers.</p><p>9. Natural numbers are irrational. <strong>This is a false statement.</strong> Because natural numbers start from 1,2,3,4,5,… while irrational numbers are numbers that cannot be expressed as a division of two integers. That is, rational numbers are real numbers that cannot be divided.</p><p>10. Zero is a natural number. <strong>This is a wrong statement </strong>because as explained above natural numbers = {1,2,3,4...} while 0 is not included in the membership of natural numbers but may be included in the membership of whole numbers.</p><p>Learn about number https://brainly.ph/question/25162846</p><p>#SPJ2</p><br />
+                                            <h2 class="ez-toc-section" id="learning-task-2-a-state-whether-each-statement-is-true-or-false-1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is-1-000-3-all-numbers-greater-than-zero-are-positive-int">
+                            16. Learning Task 2. A. State whether each statement is true or false, 1. The smallest negative integer is -1. 2. The largest negative integer is - 1 000. 3. All numbers greater than zero are positive integers. 4. The repeating decimal 0.1616... is a rational number. 5. The number pi is an irrational number 6. Every negative integer is smaller than zero. 7. Irrational numbers can be found on the number line. 8. Decimal numbers are integers. 9. The real number 625 is irrational. 10. Zero is a natural number.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.false</p><p>2.false</p><p>3.false</p><p>4.True</p><p>5.true</p><p>6.true</p><p>7.false</p><p>8.false</p><p>9.false</p><p>10.false</p><br />
+                                            <h2 class="ez-toc-section" id="true-or-false___1-the-smallest-negative-integer-is-1-___2-the-largest-negative-integer-is-1-000-___3-all-numbers-greater-than-zero-are-positive-integers-___4-the-repeating-decimal-0-1-6-1-6">
+                            17.  True Or False___1.The smallest negative integer is -1.___2. The largest negative integer is -1 000.___3.All numbers greater than zero are positive integers.___4.The repeating decimal 0. 1 6 1 6. . . is a rational number.___5.The number pi as an irrational number.___6.Every negative integer is smaller than zero.___7.Irrational numbers can be found on the number line.___8.Decimal numbers are integers.___9.The real number √625 is irrational.___10.Zero is a natural number. ​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1 true </p><p>2 true </p><p>3 true </p><p>4 false </p><p>5 false </p><p>6 true </p><p>7 true </p><p>8 true </p><p>9true</p><p>10false</p><br />
+                                            <h2 class="ez-toc-section" id="learning-task-2-a-state-whether-each-statement-is-true-or-false-e1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is-1-000-3-all-numbers-greater-than-zero-are-positive-integ">
+                            18. Learning Task 2. A. State whether each statement is true or false.E1. The smallest negative integer is -1.2. The largest negative integer is - 1 000.3. All numbers greater than zero are positive integers.4. The repeating decimal 0.1616... is a rational number.5. The number pi is an irrational number6. Every negative integer is smaller than zero.7. Irrational numbers can be found on the number line.8. Decimal numbers are integers.16259. The real number is irrational10. Zero is a natural number.Man​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. False</p><p>2. False</p><p>3. True</p><p>4. False</p><p>5. True</p><p>6. True</p><p>7. True</p><p>8. False</p><p>9. True</p><p>10. True</p><br />
+                                            <h2 class="ez-toc-section" id="state-whether-each-statement-is-true-or-false-_____1-the-smallest-negative-integer-is-1-_____2-the-largest-negative-integer-is-1-000-_____3-all-numbers-greater-than-zero-are-positive-integers">
+                            19. State whether each statement is TRUE or FALSE.
+_____1. the smallest negative integer is -1.
+_____2. the largest negative integer is - 1 000.
+_____3. all numbers greater than zero are positive integers.
+_____4. the repeating decimal 0. 1616... is a rational number.
+_____5. the number pi is an irrational number
+_____6. every negative integer is smaller than zero.
+_____7. Irrational numbers can be found on the number line.
+_____8. Decimal numbers are integers.
+_____9 the real number √625 is irrational 
+_____10. Zero is a real number.</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.True</p><p>2.False</p><p>3.False</p><p>4.True</p><p>5.True</p><p>6.False</p><p>7.True</p><p>8.True</p><p>9.True</p><p>10.True</p><p><strong>Step-by-step explanation:</strong></p><p>sana makatulong</p><p><strong>Answer:</strong></p><p>1:false</p><p>2:true</p><p>3:true</p><p>4:true</p><p>5:false</p><p>6:true</p><p>7:true</p><p>8:true</p><p>9:false</p><p>10:true</p><br />
+                                            <h2 class="ez-toc-section" id="which-of-the-following-is-a-true-statement-a-zero-is-a-natural-number-b-the-repeating-decimal-0-16-16-is-an-irrational-number-c-decimal-numbers-are-integers-d-every-negative-integer-is-smaller-tha">
+                            20. which of the following is a true statement A. Zero is a natural number B. the repeating decimal 0.16 16 is an irrational number C. decimal numbers are integers D. every negative integer is smaller than zero ​</h2><br />
+                        <p><strong>Answer:</strong></p><p>my ex man brought is new girlfriend she like omg but aim just gonna shake she said Taylor </p><br />
+                                            <h2 class="ez-toc-section" id="learning-task-2-a-state-whether-each-statement-is-true-or-false-___1-the-smallest-negative-integer-is-1___2-the-largest-negative-integer-is-1000___3-all-numbers-greater-than-zero-are-positiv">
+                            21. Learning Task 2. A. State whether each statement is true or false.
+___1. The smallest negative integer is -1
+___2. The largest negative integer is -1000
+___3. All numbers greater than zero are positive integers
+___4. The repeating decimal 0.1616...is a rational number
+___5. The number pi is an irrational number 
+___6. Every negative integer is smaller than zero 
+___7. Irrational numbers can be found on the number line.
+___8. Decimal numbers are integers.
+( NONSENSE ANSWER WILL BE REPORTED !! )</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.true</p><p>2.true</p><p>3.false</p><p>4.true</p><p>5.true</p><p>6true</p><p>7.false</p><p>8.false</p><br />
+                                            <h2 class="ez-toc-section" id="te-whether-each-statement-is-true-or-false-_________1-the-smallest-negative-integer-is-1-_________2-the-largest-negative-integer-is-%e2%80%93-1-000-_________3-all-numbers-greater-than-zero-are">
+                            22. te whether each statement is true or false. _________1. The smallest negative integer is -1. _________2. The largest negative integer is – 1 000. _________3. All numbers greater than zero are positive integers. _________4. The repeating decimal 0.1616… is a rational number. _________5. The number pi is an irrational number _________6. Every negative integer is smaller than zero. _________7. Irrational numbers can be found on the number line. _________8. Decimal numbers are integers. _________9. The real number is irrational. _________10. Zero is a natural number</h2><br />
+                        truefalsetruetruefalsetruefalsefalsetruetrue<p><strong>Answer:</strong></p><p><strong>1</strong><strong>.</strong> <strong>true</strong></p><p><strong>2</strong><strong>.</strong><strong> </strong><strong>false</strong></p><p><strong>3</strong><strong>.</strong><strong> </strong><strong>true</strong></p><p><strong>4</strong><strong>.</strong><strong> </strong><strong>true</strong></p><p><strong>5</strong><strong>.</strong><strong> </strong><strong>true</strong></p><p><strong>6</strong><strong>.</strong><strong> </strong><strong>true</strong></p><p><strong>7</strong><strong>.</strong><strong> </strong><strong>false</strong></p><p><strong>8</strong><strong>.</strong><strong> </strong><strong>false</strong></p><p><strong>9</strong><strong>.</strong><strong> </strong><strong>true</strong></p><p><strong>1</strong><strong>0</strong><strong>.</strong><strong> </strong><strong>false</strong></p><p></p><p><strong>#</strong><strong>C</strong><strong>a</strong><strong>r</strong><strong>r</strong><strong>y</strong><strong>O</strong><strong>n</strong><strong>L</strong><strong>e</strong><strong>a</strong><strong>r</strong><strong>n</strong><strong>i</strong><strong>n</strong><strong>g</strong></p><br />
+                                            <h2 class="ez-toc-section" id="learning-task-2-a-state-whether-each-statement-is-true-or-false-_____1-the-smallest-negative-integer-is-1-_____2-the-largest-negative-integer-is-1-000-_____3-all-numbers-greater-than-zero-are">
+                            23. Learning Task 2. A. State whether each statement is true or false._____1. The smallest negative integer is -1._____2. The largest negative integer is - 1 000._____3. All numbers greater than zero are positive integers._____4. The repeating decimal 0.1616... is a rational number._____5. The number pi is an irrational number._____6. Every negative integer is smaller than zero._____7. Irrational numbers can be found on the number line._____8. Decimal numbers are integers._____9. The real number √625 is irrational._____10. Zero is a natural number.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1.False</p><p>2.False</p><p>3</p><p>4.False not sure </p><p>5.True</p><p>6.True</p><p>7.True</p><p>8.False</p><p>9.False</p><p>10.False</p><br />
+                                            <h2 class="ez-toc-section" id="alog-task-2-a-state-whether-each-statement-is-true-or-false-1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is-1-000-3-all-numbers-greater-than-zero-are-positive-integers4">
+                            24. alog Task 2. A. State whether each statement is true or false.1. The smallest negative integer is -1.2. The largest negative integer is - 1 000.3. All numbers greater than zero are positive integers4. The repeating decimal 0.1616... is a rational nur5. The number pi is an irrational number6. Every negative integer is smaller than zero.7. Irrational numbers can be found on the numbe10. Zero is a natural number.Targe each set of real numbers in increasing order.8. Decimal numbers are integers.9. The real numberreal625is irrational.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>1. F</p><p>2. F</p><p>3. T</p><p>4. T</p><p>5. T</p><p>6. T</p><p>7. F (Irrational numbers can't be found on a number line)</p><p>8. F</p><p>9.  F (625 is a rational number)</p><p>10. F (0 is neither positive nor negative)</p><p></p><p></p><p></p><p>-Hope this helps :)</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="every-negative-integer-is-smaller-than-zero-true-or-false">
+                            25. Every negative integer is smaller than zero true or false</h2><br />
+                        <p><strong>Answer:</strong></p><p><strong>T</strong><strong>r</strong><strong>u</strong><strong>e</strong><strong> </strong><strong>b</strong><strong>e</strong><strong>c</strong><strong>a</strong><strong>u</strong><strong>s</strong><strong>e</strong><strong> </strong><strong>e</strong><strong>v</strong><strong>e</strong><strong>r</strong><strong>y</strong><strong> </strong><strong>n</strong><strong>e</strong><strong>g</strong><strong>a</strong><strong>t</strong><strong>i</strong><strong>v</strong><strong>e</strong><strong> </strong><strong>i</strong><strong>n</strong><strong>t</strong><strong>e</strong><strong>g</strong><strong>e</strong><strong>r</strong><strong> </strong><strong>i</strong><strong>s</strong><strong> </strong><strong>s</strong><strong>m</strong><strong>a</strong><strong>l</strong><strong>l</strong><strong>e</strong><strong>r</strong><strong> </strong><strong>t</strong><strong>h</strong><strong>a</strong><strong>n</strong><strong> </strong><strong>z</strong><strong>e</strong><strong>r</strong><strong>o</strong><strong>.</strong></p><p></p><p><strong>-</strong><strong>5</strong><strong> </strong><strong> </strong><strong>-</strong><strong>4</strong><strong> </strong><strong> </strong><strong>-</strong><strong>3</strong><strong> </strong><strong> </strong><strong>-</strong><strong>2</strong><strong> </strong><strong> </strong><strong>-</strong><strong>1</strong><strong> </strong><strong> </strong><strong>0</strong><strong> </strong><strong> </strong><strong>1</strong><strong> </strong><strong> </strong><strong>2</strong><strong> </strong><strong> </strong><strong>3</strong><strong> </strong><strong> </strong><strong>4</strong><strong> </strong><strong> </strong><strong>5</strong></p><p><strong>Answer:</strong></p><p>True</p><p>Because in the number line the numbers on the left of zero are the numbers that is smaller than zero and it is also called <strong>Negative</strong><strong> </strong>integer therefore the answer is <strong>True</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="every-negative-integer-is-smaller-than-zero-it-is-true-or-false%e2%80%8b">
+                            26. every negative integer is smaller than zero it is true or false​</h2><br />
+                        <p><strong>Answer:</strong></p><p>True</p><p></p><p><strong>Step-by-step explanation:</strong></p><p>Negative integer is smaller than zero. </p><p></p><br />
+                                            <h2 class="ez-toc-section" id="learning-task-2-a-state-whether-each-statement-is-true-or-false-1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is-%e2%80%93-1-000-3-all-numbers-greater-than-zero-are-positiv">
+                            27. Learning Task 2. A. State whether each statement is true or false.1. The smallest negative integer is -1.2. The largest negative integer is – 1 000.3. All numbers greater than zero are positive integers.4. The repeating decimal 0.1616... is a rational number.5. The number pi is an irrational number6. Every negative integer is smaller than zero.7. Irrational numbers can be found on the number line.8. Decimal numbers are integers.​</h2><br />
+                        <p><strong>Answer:</strong></p><p></p>FalseFalseTrueTrueTrueTrueFalseFalse<p></p><p></p><p>ps: naansweran ko na po to dati pero din3lete, sayang po;(</p><p></p><p>hope this helps&lt;3</p><p>#carryonlearning</p><br />
+                                            <h2 class="ez-toc-section" id="true-or-false6-every-negative-integer-is-smaller-than-zero-7-irrational-numbers-can-be-found-on-the-number-line-8-decimal-numbers-are-integers-9-the-real-number-%e2%88%9a625-is-irrational-10-zero">
+                            28. True or false6.Every negative integer  is smaller than zero. 7.Irrational numbers can be found on the number line. 8.Decimal numbers are integers. 9.The real number √625 is irrational. 10.Zero is a natural number. ​</h2><br />
+                        <p><strong>Answer:</strong></p><p><strong>6. True</strong></p><p><strong>7. True</strong></p><p><strong>8. False</strong></p><p><strong>9. False</strong></p><p><strong>10. False</strong></p><p></p><p><strong></strong></p><p><strong>That is my answer</strong></p><p><strong>I hope I helped you :)</strong></p><p><strong>Answer:</strong></p><p>F, T, T, F, T</p><p><strong>Step-by-step explanation:</strong></p><p>I'm not sure if correct </p><br />
+                                            <h2 class="ez-toc-section" id="24-which-statement-is-truea-zero-is-both-positive-and-negative-numberb-every-positive-integer-is-smaller-than-anynegative-integerc-c-positive-integers-are-all-whole-numbers-smallerthan-zerod-po">
+                            29. 24. Which statement is TRUE?a. Zero, is both positive and negative numberb. Every positive integer is smaller than anynegative integerC.c. Positive integers are all whole numbers smallerthan zerod. Positive integers are all whole numbers greaterthan zero.​</h2><br />
+                        <p><strong>Answer:</strong></p><p>D</p><p><strong>Step-by-step explanation:</strong></p><p>Positive integers are those at right (+) </p><br />
+                                            <h2 class="ez-toc-section" id="state-whether-each-statement-is-true-or-false1-the-smallest-negative-integer-is-1-2-the-largest-negative-integer-is-1000-3-all-numbers-greater-than-zero-are-positive-integer-4-the-repeating-decimal">
+                            30. State whether each statement is true or false1.The smallest negative integer is -1.2.The largest negative integer is -1000.3.All numbers greater than zero are positive integer.4.The repeating decimal 0.1616 is rational number.5.The number pi is an irrational number.6.Every negative integer is smaller than zero.7.Irrational numbers can be found on the number line.8.Decimal numbers are integers.9.The real number √625 is irrational.10.Zero is a natural number​</h2><br />
+                        <p><strong>A</strong><strong>N</strong><strong>S</strong><strong>W</strong><strong>E</strong><strong>R</strong></p>false - the smallest integers is 0false - the largest integer is -1truetruetruetruetruetruefalse - All whole numbers are integers (and all natural numbers are integers), but not all integers are whole numbers or natural numbers. false - Zero does not have a positive or negative value. Since all the natural numbers are positive integers, hence we cannot say zero is a natural number. Although zero is called a whole number.<br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/7yAUu0qPGe0?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>math</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/if-you-were-anpu-would-you-believe-your-wife-s-explanation.html">If You Were Anpu Would You Believe Your Wife s Explanation</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/to-serve-as-tools-and-containers.html">To Serve As Tools And Containers</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/komunikasyon-picture.html">Komunikasyon Picture</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/ano-ang-mga-katangian-ng-mapanagutang-tagasunod.html">Ano Ang Mga Katangian Ng Mapanagutang Tagasunod</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/the-relationship-between-media-exposure-and-health-anxiety-general-question.html">The Relationship Between Media Exposure And Health Anxiety General Question</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/tawa-ng-tawa-hanap-ay-asawa-pagpapakahulugan.html">Tawa Ng Tawa Hanap Ay Asawa Pagpapakahulugan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/ano-ang-layunin-ng-sumulat-nito.html">Ano Ang Layunin Ng Sumulat Nito</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/ang-kilos-ng-tao-ay-maaaring-maging-makataong-kilos.html">Ang Kilos Ng Tao Ay Maaaring Maging Makataong Kilos</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/ano-ang-paksa-ng-kwento.html">Ano Ang Paksa Ng Kwento</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/it-is-important-to-convince-people-to-take-actions-on.html">It Is Important To Convince People To Take Actions On</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/philosophy-in-life-as-a-student.html">Philosophy In Life As A Student</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/emma-watson-speech-gender-equality-brainly.html">Emma Watson Speech Gender Equality Brainly</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/pagmamalasakit-sa-may-kapansanan.html">Pagmamalasakit Sa May Kapansanan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/balangkas-ng-pamahalaan-ng-pilipinas.html">Balangkas Ng Pamahalaan Ng Pilipinas</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/layunin-ng-flyers.html">Layunin Ng Flyers</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/causes-and-effect-of-climate-change-brainly.html">Causes And Effect Of Climate Change Brainly</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/this-refers-to-the-lyrical-rendition-of-different-improvised-text.html">This Refers To The Lyrical Rendition Of Different Improvised Text</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/essence-of-claim-of-value.html">Essence Of Claim Of Value</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/most-media-images-are.html">Most Media Images Are</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://tageducation.github.io/sanhi-at-bunga-ng-bagyo.html">Sanhi At Bunga Ng Bagyo</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://tageducation.github.io"
+                            itemprop="url">QnA</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://tageducation.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://tageducation.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://tageducation.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://tageducation.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+    <script type='text/javascript' src='//jd3j7g5z1fqs.com/96/78/7a/96787a1945876b1a9c10f79941441964.js'></script>
+<script type='text/javascript' src='//jd3j7g5z1fqs.com/b4/f1/ef/b4f1ef8dfe59b7fa68754094cf6c8e0e.js'></script>
+  <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4739059,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4739059&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>
